@@ -1,0 +1,365 @@
+/* ---------------------------Global Styles------------------------- */
+.listen {
+  background: linear-gradient(rgba(154 50 50 / 100%), rgba(134 36 14 / 100%));
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.listen-titre h1 {
+  padding-top: 200px;
+  font-size: 4.5rem;
+  text-align: center;
+  color: white;
+  font-family: Rye, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ------------------------------Son Section--------------------------- */
+.son {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 80px;
+  margin-top: 100px;
+}
+
+.son img {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* ---------------------------Audio Control Section------------------- */
+.audio-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.audio-control button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: rgb(169 123 7 /100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.audio-control button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+/* ---------------------------Text Right Section---------------------------- */
+.text-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-right img {
+  width: 20%;
+  border: none;
+  cursor: pointer;
+}
+
+.text-right p {
+  color: white;
+  font-size: 1.3rem;
+  margin: 40px;
+}
+
+/* ---------------------------Teaser Listen Section------------------------- */
+.teaser-listen {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  margin-top: 60px;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.teaser-listen h2 {
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  transition: color 0.3s;
+  margin-top: 20px;
+}
+
+.video-container-listen {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.video-container-listen video {
+  width: 100%;
+  height: auto;
+  border: 1px solid white;
+}
+
+.teaser-listen.video-playing {
+  background: black;
+}
+
+.teaser-listen.video-playing h2 {
+  color: goldenrod;
+}
+
+.video-container-listen.video-playing video {
+  border: none;
+}
+
+/* ------------------------Gallery Section---------------------------------- */
+.galerie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.galerie h2 {
+  font-size: 2.7rem;
+  color: white;
+  margin: 50px 0;
+  margin-top: 80px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.divider {
+  width: 35%;
+  height: 0.1px;
+  margin-top: 100px;
+  background-color: goldenrod;
+}
+
+.divider2 {
+  width: 35%;
+  height: 0.1px;
+  margin-top: 50px;
+  background-color: goldenrod;
+}
+
+.gallery-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background: transparent;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.slider-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.slider-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+/* -----------------------Additional styling to center the dots---------------- */
+
+.slick-dots {
+  bottom: 0 !important;
+}
+
+/* --------------------------Adjust the spacing between dots------------------ */
+.slick-dots li {
+  margin: 0 5px !important;
+}
+
+.slick-dots li button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: white !important;
+}
+
+.slick-dots li.slick-active button {
+  background-color: goldenrod !important;
+}
+
+/* ---------------------------Overlay Section---------------------------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0 0 0 / 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  object-fit: cover;
+}
+
+.enlarged-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+
+.enlarged-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.close-button {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+}
+
+/* --------------------------Responsive Styles------------------------------- */
+
+@media (max-width: 1200px) {
+  .son {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .son img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .teaser-listen {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .gallery-container {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .gallery-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 880px) {
+  .listen-titre h1 {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 787px) {
+  .slick-dots {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .listen-titre h1 {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 759px) {
+  .listen-titre h1 {
+    font-size: 2.7rem;
+    padding-top: 160px;
+  }
+
+  .son {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .son img {
+    max-width: 450px;
+  }
+
+  .audio-control {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .text-right img {
+    width: 18%;
+  }
+
+  .text-right p {
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+
+  .video-container-listen {
+    width: 120%;
+    margin-top: 20px;
+  }
+
+  .video-container-listen video {
+    max-width: 500px;
+  }
+
+  .galerie h2 {
+    font-size: 1.2rem;
+    margin-top: 40px;
+  }
+
+  .teaser-listen h2 {
+    font-size: 2rem;
+  }
+
+  .divider2 {
+    margin-top: 30px;
+  }
+
+  .gallery-container {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+
+  .gallery-image {
+    height: 300px;
+  }
+}

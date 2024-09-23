@@ -1,0 +1,330 @@
+/* ------------------------Define CSS Variables-------------------------- */
+:root {
+  --primary-bg-color: rgba(77 85 171 / 100%);
+  --primary-text-color: rgba(13 11 14 / 100%);
+  --highlight-color: goldenrod;
+  --button-bg-color: #c97862;
+  --button-hover-color: goldenrod;
+  --border-color: white;
+  --text-light: white;
+  --blur-bg-color: rgba(255 255 255 / 60%);
+  --blur-border-color: rgba(255 255 255 / 30%);
+  --blur-font-color: rgba(134 98 5/ 100%); /* Utilisation de rgba */
+  --font-size-large: 4.5rem;
+  --font-size-medium: 2rem;
+  --font-size-small: 1.5rem;
+  --font-size-button: 1.3rem;
+}
+
+/* ---------------------------General Styles----------------------------- */
+body {
+  margin: 0;
+  font-family: Quicksand, sans-serif;
+}
+
+/* ----------------------------------Media Section---------------------- */
+.media {
+  background: var(--primary-bg-color);
+  padding: 20px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-titre h1 {
+  padding-top: 200px;
+  font-size: var(--font-size-large);
+  text-align: center;
+  color: rgb(
+    0 0 0 / 66.6%
+  ); /* Utilisation de la notation moderne */ /* Utilisation de la notation moderne */
+  font-family: Rye, serif;
+  font-weight: 400;
+}
+
+/* -------------------------Title Media Section------------------------------- */
+.tittle-media h2,
+.tittle-media h3 {
+  text-align: center;
+  padding: 10px;
+  font-weight: normal;
+  color: var(--highlight-color);
+}
+
+.tittle-media h2 {
+  font-size: var(--font-size-medium);
+  margin-top: 40px;
+}
+
+.tittle-media h3 {
+  font-size: var(--font-size-small);
+  margin-bottom: 50px;
+}
+
+/* ---------------------------------Buttons------------------------------------- */
+.li button {
+  background-color: var(--button-bg-color);
+  color: var(--text-light);
+  padding: 15px 20px;
+  font-size: var(--font-size-button);
+  border: 1px solid var(--text-light);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.li button:hover,
+.li button.active {
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+}
+
+/* ----------------------------Blur Background Section--------------------------- */
+.blur-background {
+  background: var(--blur-bg-color);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--blur-border-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.blur-background span {
+  color: var(--blur-font-color);
+}
+
+.blur-background p {
+  text-align: justify;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+/* ----------------------------Text Media Section----------------------------- */
+.texte-media,
+.texte-media2,
+.texte-media3 {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin: 50px 20px;
+}
+
+.texte-media {
+  max-width: 740px;
+}
+
+.texte-media2 {
+  max-width: 840px;
+  margin-left: 20px;
+}
+
+.texte-media3 {
+  max-width: 500px;
+  margin-right: 0;
+}
+
+/* -------------------------------Media Content Section------------------------- */
+.media-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+/* -------------------------Image Styles-------------------------------------- */
+.parcours-img,
+.parcours-img2,
+.parcours-img3 {
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.parcours-img:hover,
+.parcours-img2:hover,
+.parcours-img3:hover {
+  transform: scale(1.02);
+}
+
+.parcours-img {
+  width: 400px;
+}
+
+.parcours-img2 {
+  width: 250px;
+}
+
+.parcours-img3 {
+  width: 300px;
+  margin: 0 20px;
+}
+
+/* ------------------------------Media Picture Section------------------ */
+.media-pic {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: -10px;
+}
+
+.media-pic img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: right;
+  cursor: pointer;
+}
+
+/* ---------------------------Referent Section------------------------------- */
+.referent2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 5px;
+  color: var(--text-light);
+  transition: 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.referent2:hover {
+  background: black;
+}
+
+.referent2 a {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.referent2 a:hover {
+  color: var(--highlight-color);
+}
+
+.referent2 h4 {
+  margin: 10px;
+  font-size: 1.3rem;
+}
+
+.referent2 h5 {
+  margin: 10px;
+  font-size: 1.1rem;
+}
+
+.referent2 span {
+  padding: 10px;
+}
+
+/* -------------------------------Responsive Design--------------------------- */
+@media (max-width: 970px) {
+  .media-content {
+    flex-direction: column;
+  }
+
+  .texte-media,
+  .texte-media2,
+  .texte-media3 {
+    margin: 20px 0;
+  }
+
+  .parcours-img,
+  .parcours-img2,
+  .parcours-img3 {
+    width: 400px;
+  }
+}
+
+@media (max-width: 880px) {
+  .media-titre h1 {
+    padding-top: 220px;
+  }
+
+  .li li {
+    font-size: 1.4rem;
+    padding: 15px;
+  }
+
+  .texte-media,
+  .texte-media2,
+  .texte-media3 {
+    max-width: 530px;
+  }
+}
+
+@media (max-width: 770px) {
+  .li li {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 759px) {
+  .media-titre h1 {
+    font-size: 3rem;
+    padding-top: 170px;
+  }
+
+  .tittle-media h2 {
+    font-size: 1.5rem;
+  }
+
+  .tittle-media h3 {
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+  }
+
+  .li button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    padding: 15px 30px;
+  }
+
+  .li button span {
+    font-size: 1rem;
+  }
+
+  .texte-media,
+  .texte-media2,
+  .texte-media3 {
+    width: 320px;
+  }
+
+  .blur-background p {
+    font-size: 1rem;
+  }
+
+  .parcours-img,
+  .parcours-img2,
+  .parcours-img3 {
+    width: 320px;
+  }
+
+  .parcours-img3 {
+    margin: 0;
+  }
+
+  .media-pic img {
+    height: 200px;
+  }
+
+  .referent2 {
+    padding: 10px;
+  }
+
+  .referent2 h4 {
+    font-size: 1.3rem;
+  }
+
+  .referent2 h5 {
+    font-size: 1rem;
+  }
+}

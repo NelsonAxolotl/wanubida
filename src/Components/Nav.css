@@ -1,0 +1,393 @@
+/* -------------Style de base pour la barre de navigation-------- */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  background: rgba(
+    255 255 255 / 100%
+  ); /* Couleur de fond de la barre de navigation */
+
+  color: rgb(0 0 0); /* Couleur du texte */
+  opacity: 0; /* Opacité initiale */
+  transition: opacity 1.5s ease-in-out; /* Transition d'opacité */
+  z-index: 2; /* Position z pour superposer les autres éléments */
+}
+
+/* -------------Classe pour afficher la barre de navigation-------- */
+.navbar.show-nav,
+.navbar.hide-nav {
+  opacity: 1; /* Opacité lors de l'affichage */
+}
+
+/* ---------Style pour le logo de la barre de navigation--------- */
+.navbar-logo img {
+  height: 130px; /* Hauteur du logo */
+  margin-top: 5px;
+  width: auto;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.navbar-logo img.fade-out {
+  opacity: 0;
+}
+
+.navbar-logo img.fade-in {
+  opacity: 1;
+}
+
+/* ---------Style pour les liens dans la barre de navigation-------- */
+
+.navbar-links {
+  display: flex;
+  list-style: none; /* Supprimer les puces de liste */
+  justify-content: center; /* Centrer les éléments horizontalement */
+  align-items: center; /* Centrer les éléments verticalement */
+}
+
+/* -------------Style des liens de la barre de navigation--------- */
+.navbar-link {
+  text-decoration: none; /* Supprimer la sous-ligne des liens */
+  color: inherit; /* Couleur héritée de l'élément parent */
+  display: block;
+  padding: 10px 20px; /* Espacement interne des liens */
+  cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
+  margin-left: 25px; /* Marge à gauche des liens */
+  font-size: 19px; /* Taille de la police */
+  font-weight: 500; /* Épaisseur de la police */
+  color: rgb(0 0 0); /* Couleur du texte des liens */
+  transition: color 0.3s ease, transform 0.4s ease;
+}
+
+/* --------Effet au survol des liens de la barre de navigation-------- */
+.navbar-link:hover {
+  color: goldenrod; /* Couleur du texte au survol */
+  transform: scale(1.1);
+  border-bottom: 1px solid goldenrod; /* Bordure inférieure au survol */
+}
+
+/* -------------------Style pour le bouton de menu burger------- */
+.navbar-burger {
+  width: 40px;
+  height: 40px;
+  background: transparent; /* Arrière-plan transparent */
+  border: none; /* Pas de bordure */
+  display: none; /* Masquer le bouton par défaut */
+}
+
+/* -------Style pour les éléments de la barre de navigation------ */
+.navbar-item {
+  position: relative;
+}
+
+/* ---------Style spécifique pour le lien de la billeterie------- */
+.navbar-link.billeterie {
+  border: 2px solid goldenrod; /* Bordure solide dorée */
+  padding: 5px 10px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease, transform 0.4s ease, color 0.3s ease; /* Transitions pour les effets au survol */
+}
+
+/* -----------Effet au survol du lien de la billeterie------- */
+.navbar-link.billeterie:hover {
+  background-color: goldenrod; /* Couleur de fond au survol */
+  color: white; /* Couleur du texte au survol */
+}
+
+/* -------Style pour les éléments de survol de la barre de navigation------ */
+.navbar-hover {
+  padding: 8px 0;
+}
+
+.navbar-hover a {
+  text-decoration: none; /* Supprimer la sous-ligne des liens */
+  color: black; /* Couleur du texte */
+}
+
+/* -------Style pour le nom de la compagnie sur la page d'accueil------- */
+.company-name {
+  font-size: 5rem; /* Taille de la police */
+  text-align: center; /* Alignement du texte au centre */
+  width: 100%; /* Largeur de l'élément */
+  height: 100vh; /* Hauteur de l'élément égale à la hauteur de la fenêtre */
+  display: flex; /* Utilisation de Flexbox pour centrer le contenu */
+  align-items: center; /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement */
+  background: rgba(255 255 255 / 100%); /* Couleur de fond */
+  color: rgba(0 0 0 / 100%); /* Couleur du texte */
+  position: fixed; /* Position fixe pour rester en haut */
+  top: 0; /* Alignement en haut */
+  left: 0; /* Alignement à gauche */
+  z-index: 1001; /* Position z élevée pour superposer les autres éléments */
+  opacity: 1; /* Opacité initiale */
+}
+
+/* -----------Animation des lettres dans le nom de la compagnie------- */
+.letter {
+  opacity: 0; /* Opacité initiale des lettres */
+  animation: fade-in 1s forwards, color-golden 1s forwards; /* Animations */
+  display: inline-block; /* Affichage en bloc en ligne */
+  margin-right: 5px; /* Marge droite entre les lettres */
+}
+
+/* -----------Animation des lettres avec des délais différents------------ */
+.letter:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.letter:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.letter:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.letter:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.letter:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.letter:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.letter:nth-child(7) {
+  animation-delay: 3s;
+}
+
+.letter:nth-child(8) {
+  animation-delay: 3.5s;
+}
+
+/* ---------------Animation pour la dernière lettre--------- */
+.last-letter {
+  animation-delay: 7s; /* Délai pour la dernière lettre */
+}
+
+/* ----------------Définition des animations---------------- */
+@keyframes fade-in {
+  to {
+    opacity: 1; /* Changement de l'opacité à 1 */
+  }
+}
+
+@keyframes color-golden {
+  to {
+    color: goldenrod; /* Changement de la couleur du texte */
+  }
+}
+
+/* ---------------Style de la page d'accueil--------------- */
+.home-page {
+  opacity: 0; /* Opacité initiale */
+  transition: opacity 2.5s ease-in-out; /* Transition pour l'apparition */
+}
+
+.home-page.fade-in {
+  opacity: 1; /* Opacité lorsque la page apparaît */
+}
+
+/* ----------Style pour l'élément actif de la barre de navigation------- */
+.navbar-item.active .navbar-link {
+  color: goldenrod; /* Couleur dorée pour le lien actif */
+}
+
+/* -----------Style pour le lien de la billeterie actif------------ */
+.navbar-item.active .billeterie:hover {
+  background-color: initial; /* Couleur de fond initiale */
+  color: initial; /* Couleur du texte initiale */
+  cursor: default; /* Curseur par défaut */
+}
+
+.navbar-item.active .billeterie:hover {
+  opacity: 1; /* Opacité lorsque le lien est actif */
+  transform: none; /* Pas de transformation */
+  transition: none; /* Pas de transition */
+}
+
+/* ---------RESPONSIVE----------------- */
+
+@media (max-width: 1300px) and (min-width: 760px) {
+  .navbar-links {
+    flex-wrap: wrap; /* Enrouler les éléments si nécessaire */
+    justify-content: space-around; /* Espacement autour des éléments */
+  }
+
+  .navbar-link {
+    font-size: 1.2rem; /* Taille de la police */
+    margin-left: 10px; /* Marge à gauche */
+    padding: 10px 15px; /* Espacement interne */
+  }
+
+  .navbar-burger {
+    display: none; /* Masquer le bouton burger */
+  }
+}
+
+@media (max-width: 1084px) {
+  .navbar-links {
+    justify-content: center; /* Centrer les éléments */
+  }
+
+  .navbar-link {
+    font-size: 1.1rem; /* Taille de la police */
+    margin-left: 10px; /* Marge à gauche */
+    padding: 10px 5px; /* Espacement interne */
+  }
+}
+
+@media (max-width: 886px) {
+  .navbar {
+    padding-bottom: 10px; /* Espacement inférieur */
+  }
+}
+
+@media (max-width: 759px) {
+  nav {
+    padding-bottom: 0; /* Supprimer l'espacement inférieur */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Disposer les éléments en colonne */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+    position: fixed; /* Position fixe */
+    right: -100vw; /* Hors de l'écran à droite */
+    bottom: 0; /* Alignement en bas */
+    width: 0; /* Largeur initiale de 0 */
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    padding: 2rem; /* Espacement interne */
+    background: #e15331; /* Couleur de fond */
+    visibility: hidden; /* Masquer la barre de navigation */
+    transition: all 0.8s ease-out; /* Transition pour l'affichage */
+  }
+
+  .show-nav .navbar-links {
+    right: 0; /* Afficher la barre de navigation */
+    width: 100vw; /* Largeur pleine de l'écran */
+    visibility: visible; /* Rendre visible */
+  }
+
+  .navbar-item:last-child::after {
+    display: none; /* Masquer le pseudo-élément après le dernier élément */
+  }
+
+  .navbar-link {
+    display: block; /* Afficher les liens en bloc */
+    padding: 1.6rem; /* Espacement interne */
+    font-size: 6vw; /* Taille de la police relative à la largeur de l'écran */
+    margin: 0; /* Supprimer la marge */
+    color: white; /* Couleur du texte */
+  }
+
+  .navbar-burger {
+    display: block; /* Afficher le bouton burger */
+    position: fixed; /* Position fixe */
+    top: 1rem; /* Positionner en haut */
+    right: 1rem; /* Positionner à droite */
+  }
+
+  .navbar-burger:hover {
+    cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
+  }
+
+  .burger-bar,
+  .burger-bar::before,
+  .burger-bar::after {
+    display: block; /* Afficher les barres du menu burger */
+    width: 40px; /* Largeur des barres */
+    height: 3px; /* Hauteur des barres */
+    position: relative; /* Position relative */
+    border-radius: 3px; /* Coins arrondis */
+    background: black; /* Couleur de fond */
+    transition: all 0.5s ease-in-out; /* Transition pour les effets */
+  }
+
+  .burger-bar::before,
+  .burger-bar::after {
+    content: ""; /* Pas de contenu pour les pseudo-éléments */
+    position: absolute; /* Position absolue */
+    left: 0; /* Alignement à gauche */
+  }
+
+  .burger-bar::before {
+    transform: translateY(-12px); /* Positionner la barre supérieure */
+  }
+
+  .burger-bar::after {
+    transform: translateY(12px); /* Positionner la barre inférieure */
+  }
+
+  .show-nav .burger-bar {
+    background: transparent; /* Arrière-plan transparent */
+    width: 0; /* Largeur nulle pour la barre principale */
+  }
+
+  .show-nav .burger-bar::before {
+    transform: rotate(45deg); /* Rotation pour former une croix */
+    background: white; /* Couleur blanche pour la barre supérieure */
+  }
+
+  .show-nav .burger-bar::after {
+    transform: rotate(-45deg); /* Rotation pour former une croix */
+    background: white; /* Couleur blanche pour la barre supérieure */
+  }
+
+  .navbar-item {
+    transform: translateY(200vh); /* Positionner les éléments hors de l'écran */
+  }
+
+  .show-nav .navbar-item {
+    transform: translateY(0); /* Réinitialiser la position */
+  }
+
+  /* Transitions pour les éléments qui apparaissent */
+  .show-nav .slide-in-down-1 {
+    transition: all 1s ease-out;
+  }
+
+  .show-nav .slide-in-down-2 {
+    transition: all 1.2s ease-out;
+  }
+
+  .show-nav .slide-in-down-3 {
+    transition: all 1.4s ease-out;
+  }
+
+  .show-nav .slide-in-down-4 {
+    transition: all 1.6s ease-out;
+  }
+
+  .show-nav .slide-in-down-5 {
+    transition: all 1.8s ease-out;
+  }
+
+  .show-nav .slide-in-down-6 {
+    transition: all 2s ease-out;
+  }
+
+  .show-nav .slide-in-down-7 {
+    transition: all 2.2s ease-out;
+  }
+
+  .show-nav .slide-in-down-8 {
+    transition: all 2.4s ease-out;
+  }
+
+  .company-name {
+    font-size: 3rem; /* Réduire la taille de la police pour les petits écrans */
+  }
+
+  .navbar-link:hover {
+    color: goldenrod; /* Couleur du texte au survol */
+    transform: scale(1.1); /* Agrandissement au survol */
+    border-bottom: none; /* Pas de bordure au survol */
+  }
+}

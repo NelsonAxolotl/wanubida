@@ -1,0 +1,425 @@
+/* -----------------Define CSS Variables for easier maintenance---------------- */
+:root {
+  --primary-gradient: linear-gradient(135deg, #f4683a, #e07b1b);
+  --highlight-color: goldenrod;
+  --text-light: white;
+  --text-dark: black;
+  --background-light: aliceblue;
+  --background-dark: black;
+  --button-bg: #4499a8;
+  --button-hover-bg: goldenrod;
+}
+
+/* -------------------General Styles-------------------------------------------- */
+body {
+  margin: 0;
+  font-family: Quicksand, sans-serif;
+}
+
+/* --------------------Show Section-------------------------------- */
+.show {
+  background: var(--primary-gradient);
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.show-titre h1 {
+  padding-top: 210px;
+  font-size: 4.5rem;
+  text-align: center;
+  color: var(--text-light);
+  font-family: Rye, serif;
+  font-weight: 400;
+}
+
+/* ----------------------------Facteur Section-------------------------------- */
+.facteur {
+  border: 2px solid var(--highlight-color);
+  width: 100%;
+  max-width: 1150px;
+  background: var(--background-light);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  padding: 10px;
+}
+
+.facteur-h2 {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 2.7rem;
+  color: var(--text-light);
+  font-weight: normal;
+  border: 2px solid var(--highlight-color);
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+
+.facteur-text p {
+  color: var(--text-dark);
+  text-align: justify;
+  padding: 20px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+/* Public Section */
+.public {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.public img {
+  width: 500px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.public img:hover {
+  transform: scale(1.01);
+}
+
+.public h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.public h3 {
+  font-size: 1.8rem;
+  color: rgb(211 184 114);
+  font-weight: normal;
+  margin: 20px;
+  text-align: center;
+}
+
+.public p,
+.public span {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.public p {
+  margin: 20px;
+}
+
+.public span {
+  margin: 10px 0;
+}
+
+/* --------------------------Teaser Show Section----------------------------- */
+.teaser-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 1280px;
+  padding: 40px;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.teaser-spectacle h2 {
+  font-size: 2.7rem;
+  text-align: center;
+  color: var(--text-light);
+  font-weight: normal;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+  border-radius: 10px;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+}
+
+.teaser-show.video-playing {
+  background-color: var(--text-light);
+  border-radius: 5px;
+}
+
+/* --------------------------------- Pro Section------------------------------- */
+.pro,
+.tek {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pro h2,
+.tek h2 {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: var(--text-light);
+  border: 1px solid var(--highlight-color);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* ---------------------------------- Buttons---------------------------------- */
+.download-button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  background-color: var(--button-bg);
+  border: 1px solid var(--text-light);
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.download-button:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 40px;
+}
+
+/* -------------------------------------File Section-------------------------- */
+.file {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+  margin-top: 30px;
+  width: 900px;
+}
+
+.responsive-groupe-img,
+.responsive-groupe2-img {
+  border-radius: 5px;
+  object-fit: cover;
+  border: 1px solid var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.responsive-groupe-img:hover,
+.responsive-groupe2-img:hover {
+  transform: scale(1.02);
+}
+
+.responsive-groupe-img {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.responsive-groupe2-img {
+  width: 400px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+/* ----------------------------Tek Accueil Section------------------------- */
+.tek-accueil p {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: normal;
+  line-height: 22px;
+  margin: 20px;
+}
+
+/* ---------------------------Referrent Section------------------------------ */
+.referrent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--text-light);
+  margin: 30px 0 60px;
+  padding: 20px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 80px;
+}
+
+.referrent:hover {
+  background-color: #4499a8;
+}
+
+.referrent h4 {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  font-weight: normal;
+}
+
+.referrent h5 {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+.referrent span {
+  padding: 0 10px;
+}
+
+.referrent a {
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.referrent a:hover {
+  color: var(--highlight-color);
+}
+
+/* ---------------------Media Queries for Responsive Design------------------- */
+@media (max-width: 1024px) {
+  .facteur {
+    max-width: 800px;
+    margin: 30px 0;
+  }
+
+  .facteur-text p {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 930px) {
+  .tek-accueil p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .file {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 886px) {
+  .show-titre h1 {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 766px) {
+  .facteur {
+    max-width: 600px;
+    margin: 20px 0;
+  }
+
+  .show-titre h1 {
+    font-size: 3rem;
+    padding-top: 200px;
+  }
+
+  .facteur-h2 {
+    font-size: 1.5rem;
+    margin-top: 60px;
+  }
+
+  .facteur-text p {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .teaser-spectacle h2 {
+    font-size: 2rem;
+  }
+
+  .public h3 {
+    font-size: 1.2rem;
+  }
+
+  .public span {
+    font-size: 0.875rem;
+  }
+
+  .public p {
+    font-size: 0.875rem;
+  }
+
+  .public img {
+    width: 100%;
+  }
+
+  .file {
+    width: 350px;
+    margin-top: 20px;
+  }
+
+  .teaser-show {
+    padding: 10px;
+  }
+
+  .teaser-spectacle h2 {
+    margin-top: 30px;
+  }
+
+  .video-container video {
+    width: 100%;
+    height: auto;
+  }
+
+  .pro h2,
+  .tek h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .download-button {
+    font-size: 1rem;
+  }
+
+  .responsive-groupe2-img,
+  .responsive-groupe-img {
+    width: 320px;
+  }
+
+  .tek-accueil p {
+    font-size: 0.875rem;
+  }
+
+  .referrent h4 {
+    font-size: 1.3rem;
+  }
+
+  .referrent h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 759px) {
+  .show-titre h1 {
+    padding-top: 160px;
+  }
+}

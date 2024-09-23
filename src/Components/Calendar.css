@@ -1,0 +1,303 @@
+/* ------------------Styles pour le titre principal----------------------- */
+.titre {
+  text-align: center; /* Centre le texte */
+  margin-top: 40px; /* Marge en haut du titre */
+}
+
+.titre h1 {
+  font-family: Rye, serif; /* Police utilisée pour le titre */
+  font-weight: 400; /* Poids de la police */
+  font-style: normal; /* Style de la police */
+  margin-top: 170px; /* Marge en haut du titre */
+  font-size: 4.5rem; /* Taille de la police */
+  color: brown; /* Couleur du texte */
+}
+
+/* -----------------Styles pour la page de calendrier------------------ */
+.calendar-page-background {
+  background-color: rgb(222 185 111 / 100%); /* Couleur de fond de la page */
+  min-height: 100vh; /* Hauteur minimale de la page */
+  display: flex; /* Utilisation du Flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 10px; /* Espacement intérieur */
+  flex-direction: column; /* Organisation en colonne */
+}
+
+/* -----------------Styles pour le calendrier--------------------- */
+.calendar {
+  display: flex; /* Utilisation du Flexbox */
+  flex-direction: column; /* Organisation en colonne */
+  width: 100%; /* Largeur de 100% */
+  max-width: 800px; /* Largeur maximale */
+  margin: 20px auto; /* Marge automatique centrée horizontalement */
+  margin-top: 60px; /* Marge en haut */
+  margin-bottom: 60px; /* Marge en bas */
+  background: rgb(237 163 163 / 100%); /* Couleur de fond */
+  padding-bottom: 50px; /* Espacement intérieur en bas */
+  border-radius: 10px; /* Bordures arrondies */
+  box-shadow: 0 4px 8px rgba(0 0 0 / 10%); /* Ombre portée, notation moderne */
+  overflow: hidden; /* Cacher les débordements */
+}
+
+/* ----------------------Styles pour l'en-tête du calendrier--------------- */
+.header {
+  display: flex; /* Utilisation du Flexbox */
+  justify-content: space-between; /* Espacement entre les éléments */
+  align-items: center; /* Alignement des éléments au centre verticalement */
+}
+
+/* -------------------------Styles pour les lignes du calendrier----------- */
+.row {
+  display: flex; /* Utilisation du Flexbox */
+}
+
+/* ------------------------Styles pour les colonnes du calendrier------------ */
+.col {
+  flex: 1; /* Flexibilité des colonnes */
+  text-align: center; /* Centre le texte */
+  padding: 8px; /* Espacement intérieur */
+  display: flex; /* Utilisation du Flexbox */
+  justify-content: space-between; /* Espacement entre les éléments */
+  align-items: center; /* Alignement des éléments au centre verticalement */
+}
+
+.col-start {
+  justify-content: flex-start; /* Alignement à gauche */
+}
+
+.col-center {
+  justify-content: center; /* Alignement au centre */
+}
+
+.month-label {
+  font-size: 1.4rem; /* Taille de la police pour les labels des mois */
+  font-weight: normal; /* Poids de la police */
+}
+
+.col-end {
+  justify-content: flex-end; /* Alignement à droite */
+}
+
+/* ----------------------Styles pour les icônes---------------------------- */
+.icon {
+  cursor: pointer; /* Curseur en main au survol */
+  font-size: 24px; /* Taille de la police pour les icônes */
+}
+
+/* ---------------Styles pour les cas spéciaux dans le calendrier-------------- */
+.special-cases {
+  display: flex; /* Utilisation du Flexbox */
+  justify-content: space-around; /* Espacement entre les éléments */
+  padding: 10px 0; /* Espacement intérieur vertical */
+  background-color: #f0f0f0; /* Couleur de fond */
+}
+
+.special-case {
+  padding: 5px 10px; /* Espacement intérieur */
+  border-radius: 5px; /* Bordures arrondies */
+  font-weight: normal; /* Poids de la police */
+  color: #fff; /* Couleur du texte */
+}
+
+/* ------------------Couleurs pour les jours spécifiques------------------- */
+.special-case.wednesday {
+  background-color: pink; /* Couleur de fond pour les mercredis */
+  display: flex; /* Utilisation du Flexbox */
+  flex-direction: column; /* Organisation en colonne */
+  align-items: center; /* Alignement au centre horizontalement */
+}
+
+.special-case.friday {
+  background-color: goldenrod; /* Couleur de fond pour les vendredis */
+  display: flex; /* Utilisation du Flexbox */
+  flex-direction: column; /* Organisation en colonne */
+  align-items: center; /* Alignement au centre horizontalement */
+}
+
+.special-case.saturday {
+  background-color: violet; /* Couleur de fond pour les samedis */
+  display: flex; /* Utilisation du Flexbox */
+  flex-direction: column; /* Organisation en colonne */
+  align-items: center; /* Alignement au centre horizontalement */
+}
+
+.special-case.sunday {
+  background-color: rgb(97 151 187 / 100%);
+
+  /* Couleur de fond pour les dimanches */
+  display: flex; /* Utilisation du Flexbox */
+  flex-direction: column; /* Organisation en colonne */
+  align-items: center; /* Alignement au centre horizontalement */
+}
+
+.special-case.passees {
+  background-color: #954242; /* Couleur de fond pour les cas passés */
+  display: flex; /* Utilisation du Flexbox */
+  flex-direction: column; /* Organisation en colonne */
+  align-items: center; /* Alignement au centre horizontalement */
+}
+
+/* --------------------Styles pour les jours du calendrier--------------- */
+.days {
+  background-color: #f0f0f0; /* Couleur de fond pour les jours */
+}
+
+/* ------------------Styles pour le corps du calendrier------------------- */
+.body {
+  background-color: #fff; /* Couleur de fond pour le corps */
+}
+
+/* ------------------Styles pour les cellules du calendrier---------------- */
+.cell {
+  min-height: 60px; /* Hauteur minimale des cellules */
+  display: flex; /* Utilisation du Flexbox */
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  cursor: pointer; /* Curseur en main au survol */
+  border: 1px solid #ddd; /* Bordure des cellules */
+  position: relative; /* Positionnement relatif */
+  overflow: hidden; /* Cacher les débordements */
+}
+
+/* -----------------Styles pour les info-bulles des cellules--------------- */
+.cell .time-tooltip {
+  display: none; /* Caché par défaut */
+  position: absolute; /* Positionnement absolu */
+  bottom: 5px; /* Espacement en bas */
+  left: 50%; /* Centré horizontalement */
+  transform: translateX(-50%); /* Centrer horizontalement */
+  background: #333; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  padding: 5px; /* Espacement intérieur */
+  border-radius: 3px; /* Bordures arrondies */
+  font-size: 0.8rem; /* Taille de la police */
+}
+
+/* ----------------------Affichage de l'info-bulle au survol---------------- */
+.cell:hover .time-tooltip {
+  display: block; /* Afficher l'info-bulle */
+}
+
+/* --------------------Styles pour les cellules sélectionnées----------------- */
+.cell.selected {
+  background-color: #007bff; /* Couleur de fond pour la cellule sélectionnée */
+  color: #fff; /* Couleur du texte */
+}
+
+/* --------------------Styles pour les cellules désactivées------------------ */
+.cell.disabled {
+  background-color: #f0f0f0; /* Couleur de fond pour les cellules désactivées */
+  color: #ccc; /* Couleur du texte */
+}
+
+/* -------------Couleurs pour les jours spécifiques des cellules------------ */
+.cell.wednesday {
+  background-color: pink; /* Couleur de fond pour les mercredis */
+}
+
+.cell.friday {
+  background-color: goldenrod; /* Couleur de fond pour les vendredis */
+}
+
+.cell.saturday {
+  background-color: violet; /* Couleur de fond pour les samedis */
+}
+
+.cell.sunday {
+  background-color: rgba(
+    97 151 187 / 100%
+  ); /* Couleur de fond pour les dimanches */
+}
+
+/* ------------------Styles pour les cellules avec événements-------------- */
+.cell.event {
+  position: relative; /* Positionnement relatif pour l'indicateur d'événement */
+}
+
+/* ------------------Indicateur d'événement----------------------------------- */
+.cell.event .event-indicator {
+  position: absolute; /* Positionnement absolu */
+  top: 5px; /* Espacement en haut */
+  right: 5px; /* Espacement à droite */
+  width: 8px; /* Largeur de l'indicateur */
+  height: 8px; /* Hauteur de l'indicateur */
+  border-radius: 50%; /* Bordures arrondies */
+  background-color: red; /* Couleur de l'indicateur d'événement */
+}
+
+/* ----------------Styles pour les dates passées--------------------- */
+.past {
+  color: gray; /* Couleur du texte pour les dates passées */
+  cursor: not-allowed; /* Curseur non autorisé pour les dates passées */
+  background-color: #954242; /* Couleur de fond pour les dates passées */
+}
+
+/* ---------------Affichage différent des dates passées au survol------------ */
+.past:hover {
+  background-color: #c0c0c0; /* Couleur de fond au survol */
+}
+
+/* ---------------Styles pour le groupe de photos------------------------- */
+.groupe-pic {
+  width: 100%; /* Largeur de 100% */
+  overflow: hidden; /* Cacher les débordements */
+  position: relative; /* Positionnement relatif */
+  height: 500px; /* Hauteur fixe */
+}
+
+/* ------------------Styles pour l'agenda responsive------------------------- */
+.responsive-agenda {
+  width: 100%; /* Largeur de 100% */
+  height: 100%; /* Hauteur de 100% */
+  object-fit: cover; /* Ajuster l'image pour couvrir l'espace */
+  object-position: top left; /* Positionner l'image en haut à gauche */
+  cursor: pointer;
+}
+
+/* ---------------Styles responsifs pour les tailles d'écran-------------------- */
+@media (max-width: 865px) {
+  .titre h2 {
+    margin-top: 210px; /* Ajustement de la marge pour les petits écrans */
+  }
+}
+
+@media (max-width: 886px) {
+  .titre h1 {
+    margin-top: 190px; /* Ajustement de la marge pour les petits écrans */
+  }
+}
+
+@media (max-width: 759px) {
+  .calendar {
+    width: 100%; /* Largeur de 100% pour les petits écrans */
+    margin: 0 15px 60px; /* Marges ajustées */
+    margin-top: 60px; /* Marge en haut */
+  }
+
+  .titre h1 {
+    margin-top: 150px; /* Ajustement de la marge pour les petits écrans */
+    font-size: 2.7rem; /* Réduction de la taille de la police */
+  }
+
+  .days {
+    gap: 0; /* Suppression de l'écart entre les jours */
+    padding: 0; /* Suppression du padding */
+    font-size: 0.875rem; /* Réduction de la taille de la police */
+  }
+
+  .month-label {
+    font-size: 1.2rem; /* Réduction de la taille de la police pour les mois */
+    font-weight: normal; /* Poids de la police */
+  }
+
+  .special-cases {
+    gap: 0; /* Réduction de l'écart entre les cas spéciaux */
+    padding: 5px; /* Réduction du padding */
+    font-size: 0.7rem; /* Réduction de la taille de la police */
+  }
+
+  .groupe-pic {
+    height: 200px; /* Réduction de la hauteur pour les petits écrans */
+  }
+}
