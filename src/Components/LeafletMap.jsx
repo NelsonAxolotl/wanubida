@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 
 // Fixing the default icon issue with Leaflet and React
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
@@ -16,8 +16,8 @@ L.Icon.Default.mergeOptions({
 });
 
 const LeafletMap = () => {
-  // Coordonnées de Roanne
-  const position = [46.0301495, 4.0666698];
+  // Coordonées de l'adresse "entrePOTE, 99 Rue de Clermont, 42300 Roanne"
+  const position = [46.0396, 4.067]; // Les coordonnées fournies
 
   return (
     <MapContainer center={position} zoom={13} className="map">
@@ -26,7 +26,7 @@ const LeafletMap = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
-        <Popup>Roanne, 42300</Popup>
+        <Popup>entrePOTE, 99 Rue de Clermont, 42300 Roanne</Popup>
       </Marker>
     </MapContainer>
   );
