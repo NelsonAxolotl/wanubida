@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://www.wanubida.com/$1",
+      "destination": "https://www.wanubida.com/",
       "permanent": true
     }
   ],
