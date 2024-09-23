@@ -59,7 +59,7 @@ const Event18Show = () => {
 
       {/* Événement de l'après-midi à 16h */}
       <div className="event2">
-        <div className="content-container-black2">
+        <div className="kebab-case-black2">
           <div className="text-section1">
             <h4>La tournée du facteur</h4>
             <p>Dimanche 3 Novembre 2024</p>

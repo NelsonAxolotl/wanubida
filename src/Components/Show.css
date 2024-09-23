@@ -272,7 +272,7 @@ body {
 }
 
 .referrent h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--text-light);
   font-weight: normal;
 }
@@ -295,6 +295,12 @@ body {
 
 .referrent a:hover {
   color: var(--highlight-color);
+}
+
+.referrent h6 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: white;
 }
 
 /* ---------------------Media Queries for Responsive Design------------------- */
@@ -415,6 +421,12 @@ body {
 
   .referrent h5 {
     font-size: 1rem;
+  }
+
+  .referrent h6 {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: white;
   }
 }
 
