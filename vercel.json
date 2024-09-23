@@ -1,33 +1,8 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://www.wanubida.com/$1",
-      "permanent": true
-    },
-    {
-      "source": "http://www.wanubida.com/(.*)",
-      "destination": "https://www.wanubida.com/$1",
-      "permanent": true
-    },
-    {
-      "source": "http://wanubida.com/(.*)",
-      "destination": "https://www.wanubida.com/$1",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://trusted.cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://wanubida.com; font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com; connect-src 'self' https://ka-f.fontawesome.com; frame-ancestors 'none';"
-        },
-        {
-          "key": "Strict-Transport-Security",
-          "value": "max-age=31536000; includeSubDomains; preload"
-        },
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
@@ -45,8 +20,8 @@
           "value": "strict-origin-when-cross-origin"
         },
         {
-          "key": "Permissions-Policy",
-          "value": "geolocation=(self), microphone=()"
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
         }
       ]
     }
