@@ -17,7 +17,7 @@ L.Icon.Default.mergeOptions({
 
 const LeafletMap = () => {
   // Coordonées de l'adresse "entrePOTE, 99 Rue de Clermont, 42300 Roanne"
-  const position = [46.0396, 4.067]; // Les coordonnées fournies
+  const position = [46.0301495, 4.0666698]; // Les coordonnées fournies
 
   return (
     <MapContainer center={position} zoom={13} className="map">
