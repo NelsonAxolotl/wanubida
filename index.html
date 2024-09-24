@@ -5,37 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Cabaret Wanubida propose des spectacles captivants de danse, théâtre et cirque à travers la France."
+      content="Cabaret Wanubida propose des spectacles captivants de danse, théâtre et cirque à travers la France. Réservez vos places dès maintenant pour vivre des moments inoubliables !"
+    />
+    <meta
+      name="keywords"
+      content="Wanubida, cabaret, spectacles, événements, cirque, théâtre, danse, France, divertissement"
     />
     <meta name="author" content="Wanubida" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Content Security Policy -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://wanubida.com https://*.tile.openstreetmap.org; font-src 'self' https://fonts.gstatic.com;"
+      content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.css; img-src 'self' data: https://wanubida.com https://*.tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com https://ka-f.fontawesome.com; connect-src 'self' https://ka-f.fontawesome.com;"
     />
 
-    <title>Wanubida - Cabaret Wanubida</title>
+    <!-- Indexation SEO -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- SEO Meta Tags Open Graph -->
+    <meta
+      property="og:title"
+      content="Cabaret Wanubida - Spectacles Éblouissants en France"
+    />
+    <meta
+      property="og:description"
+      content="Découvrez les spectacles envoûtants du Cabaret Wanubida. Réservez votre place pour une expérience culturelle inoubliable !"
+    />
+    <meta
+      property="og:image"
+      content="https://wanubida.com/public/affiche.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="Affiche de la tournée du Cabaret Wanubida"
+    />
+    <meta property="og:url" content="https://wanubida.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cabaret Wanubida" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Cabaret Wanubida - Spectacles et Événements"
+    />
+    <meta
+      name="twitter:description"
+      content="Découvrez les spectacles et événements du Cabaret Wanubida. Rejoignez-nous pour une expérience culturelle inoubliable."
+    />
+    <meta
+      name="twitter:image"
+      content="https://wanubida.com/public/affiche.webp"
+    />
+    <meta name="twitter:image:alt" content="Affiche de la tournée Wanubida" />
+
+    <!-- Canonical & hreflang for SEO -->
+    <link rel="canonical" href="https://wanubida.com" />
+    <link rel="alternate" href="https://wanubida.com" hreflang="x-default" />
+    <link rel="alternate" href="https://wanubida.com" hreflang="fr" />
+    <link rel="alternate" href="https://wanubida.fr" hreflang="fr-FR" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
+
+    <!-- Preloading Critical Resources -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Rye:wght@400;700&display=swap"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      as="style"
+    />
+
+    <!-- Load Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rye:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Load Leaflet CSS -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rye:wght@400&display=swap"
-    />
 
-    <!-- Load FontAwesome -->
+    <!-- FontAwesome Icons -->
     <script
       src="https://kit.fontawesome.com/b78f7f545e.js"
       crossorigin="anonymous"
       defer
     ></script>
+
+    <title>Wanubida - Cabaret Wanubida</title>
+
+    <!-- Microdata for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cabaret Wanubida",
+        "url": "https://wanubida.com",
+        "logo": "https://wanubida.com/public/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/wanubida",
+          "https://twitter.com/wanubida",
+          "https://www.instagram.com/wanubida"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <h1>Cabaret Wanubida - Nos Emplacements</h1>
+    <div id="root"></div>
+
+    <!-- Leaflet Map Container -->
     <div id="map" style="height: 500px"></div>
 
     <!-- Leaflet Map Script -->
@@ -50,7 +141,7 @@
         attribution: "© OpenStreetMap contributors",
       }).addTo(map);
 
-      // Marqueurs pour les adresses
+      // Marqueurs pour les deux adresses
       var marker1 = L.marker([46.0301495, 4.0666698])
         .addTo(map)
         .bindPopup("Emplacement 1 : Latitude 46.0301495, Longitude 4.0666698")
@@ -62,5 +153,8 @@
           "Emplacement 2 : Latitude 45.86116409301758, Longitude 4.760488033294678"
         );
     </script>
+
+    <!-- Deferred loading of the main script -->
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>
