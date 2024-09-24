@@ -17,16 +17,16 @@
     <!-- Content Security Policy -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; 
-              img-src 'self' data: https://wanubida.com https://example.com; 
-              script-src 'self' https://kit.fontawesome.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.js; 
-              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.css; 
-              font-src 'self' data: https://fonts.gstatic.com https://ka-f.fontawesome.com;"
+      content="
+        default-src 'self'; 
+        script-src 'self' https://kit.fontawesome.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.js; 
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+        img-src 'self' data: https://wanubida.com https://example.com; /* Remplacez example.com par vos autres sources d'images */
+      "
     />
 
-    <!-- Indexation SEO -->
+    <!-- Autres Meta Tags -->
     <meta name="robots" content="index, follow" />
-
     <!-- SEO Meta Tags Open Graph -->
     <meta
       property="og:title"
@@ -48,7 +48,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Cabaret Wanubida" />
     <meta property="og:locale" content="fr_FR" />
-
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -70,10 +69,8 @@
     <link rel="alternate" href="https://wanubida.com" hreflang="x-default" />
     <link rel="alternate" href="https://wanubida.com" hreflang="fr" />
     <link rel="alternate" href="https://wanubida.fr" hreflang="fr-FR" />
-
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
-
     <!-- Preloading Critical Resources -->
     <link
       rel="preload"
@@ -85,7 +82,6 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       as="style"
     />
-
     <!-- Load Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Rye:wght@400;700&display=swap"
@@ -95,25 +91,18 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
     <!-- Load Leaflet CSS -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
-
     <!-- FontAwesome Icons -->
     <script
       src="https://kit.fontawesome.com/b78f7f545e.js"
       crossorigin="anonymous"
       defer
     ></script>
-
-    <title>
-      Wanubida - Le Cabaret Wanubida propose des spectacles de Cirque, Danse, et
-      Théâtre en France.
-    </title>
-
+    <title>Cabaret Wanubida</title>
     <!-- Microdata for SEO -->
     <script type="application/ld+json">
       {
@@ -132,14 +121,11 @@
   </head>
   <body>
     <div id="root"></div>
-
     <!-- Leaflet Map Container -->
-    <div id="map" style="height: auto"></div>
-
+    <div id="map" style="height: 500px"></div>
     <!-- Leaflet Map Script -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="map.js" defer></script>
-
     <!-- Deferred loading of the main script -->
     <script type="module" src="/src/main.jsx" defer></script>
   </body>
