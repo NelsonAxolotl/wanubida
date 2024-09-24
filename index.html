@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -12,16 +13,19 @@
     />
     <meta name="author" content="Cabaret Wanubida" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Politique de Sécurité de Contenu (CSP) -->
     <meta
       http-equiv="Content-Security-Policy"
       content="
         default-src 'self'; 
         script-src 'self' 'unsafe-inline' https://kit.fontawesome.com; 
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com; 
-        img-src 'self' data: https://wanubida.com; 
+        img-src 'self' data: https://wanubida.com https://unpkg.com https://*.tile.openstreetmap.org; 
         font-src 'self' data: https://fonts.gstatic.com https://ka-f.fontawesome.com; 
         connect-src 'self' https://ka-f.fontawesome.com;"
     />
+
     <meta name="robots" content="index, follow" />
 
     <!-- SEO Meta Tags Open Graph -->
