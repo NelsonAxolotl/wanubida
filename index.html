@@ -13,15 +13,11 @@
     />
     <meta name="author" content="Wanubida" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Content Security Policy -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; 
-             script-src 'self' https://kit.fontawesome.com https://unpkg.com; 
-             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; 
-             img-src 'self' data: https://wanubida.com https://unpkg.com; 
-             font-src 'self' data: https://fonts.gstatic.com https://ka-f.fontawesome.com; 
-             connect-src 'self' https://ka-f.fontawesome.com https://unpkg.com; 
-             frame-ancestors 'none';"
+      content="default-src 'self'; script-src 'self' https://kit.fontawesome.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.css; img-src 'self' data: https://wanubida.com https://*.tile.openstreetmap.org; font-src 'self' data: https://fonts.gstatic.com https://ka-f.fontawesome.com; connect-src 'self' https://ka-f.fontawesome.com;"
     />
 
     <!-- Indexation SEO -->
@@ -96,6 +92,12 @@
       rel="stylesheet"
     />
 
+    <!-- Load Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+
     <!-- FontAwesome Icons -->
     <script
       src="https://kit.fontawesome.com/b78f7f545e.js"
@@ -103,7 +105,7 @@
       defer
     ></script>
 
-    <title>Cabaret Wanubida</title>
+    <title>Wanubida - Cabaret Wanubida</title>
 
     <!-- Microdata for SEO -->
     <script type="application/ld+json">
@@ -123,11 +125,35 @@
   </head>
   <body>
     <div id="root"></div>
+
     <!-- Leaflet Map Container -->
-    <div id="map" style="height: auto"></div>
+    <div id="map" style="height: 500px"></div>
 
     <!-- Leaflet Map Script -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+      // Initialisation de la carte
+      var map = L.map("map").setView([46.0301495, 4.0666698], 8); // Vue centrée sur le premier point
+
+      // Ajout d'une couche de tuiles
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap contributors",
+      }).addTo(map);
+
+      // Marqueurs pour les deux adresses
+      var marker1 = L.marker([46.0301495, 4.0666698])
+        .addTo(map)
+        .bindPopup("Emplacement 1 : Latitude 46.0301495, Longitude 4.0666698")
+        .openPopup();
+
+      var marker2 = L.marker([45.86116409301758, 4.760488033294678])
+        .addTo(map)
+        .bindPopup(
+          "Emplacement 2 : Latitude 45.86116409301758, Longitude 4.760488033294678"
+        );
+    </script>
+
     <!-- Deferred loading of the main script -->
     <script type="module" src="/src/main.jsx" defer></script>
   </body>
