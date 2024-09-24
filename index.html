@@ -19,8 +19,8 @@
       http-equiv="Content-Security-Policy"
       content="
         default-src 'self'; 
-        script-src 'self' 'unsafe-inline' https://kit.fontawesome.com; 
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com; 
+        script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://unpkg.com; 
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://ka-f.fontawesome.com https://unpkg.com; 
         img-src 'self' data: https://wanubida.com https://unpkg.com https://*.tile.openstreetmap.org; 
         font-src 'self' data: https://fonts.gstatic.com https://ka-f.fontawesome.com; 
         connect-src 'self' https://ka-f.fontawesome.com;"
@@ -73,7 +73,7 @@
     <link rel="alternate" href="https://wanubida.fr" hreflang="fr-FR" />
 
     <!-- Favicon & Icons -->
-    <link rel="icon" type="image/svg+xml" href="/public/favicon.ico" />
+    <link rel="icon" type="image/png" href="/public/favicon.ico" />
 
     <!-- Preloading Critical Resources -->
     <link
@@ -97,14 +97,19 @@
       rel="stylesheet"
     />
 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <!-- FontAwesome Icons -->
     <script
       src="https://kit.fontawesome.com/b78f7f545e.js"
       crossorigin="anonymous"
       defer
     ></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+
     <title>
       Cabaret Wanubida - Spectacles de Danse, Cirque et Théâtre en France
     </title>
