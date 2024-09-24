@@ -190,12 +190,12 @@ const Show = () => {
             </span>
             <a href="mailto:cabaretwanubida@gmx.fr">cabaretwanubida@gmx.fr</a>
           </h5>
-          <h6>
+          <p>
             <span>
               <FontAwesomeIcon icon={faPhone} />
             </span>
             Corentin : 06 80 54 05 74
-          </h6>
+          </p>
         </div>
       </div>
       {enlargedImage && (

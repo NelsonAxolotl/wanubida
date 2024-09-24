@@ -296,7 +296,7 @@ body {
   color: var(--highlight-color);
 }
 
-.referrent h6 {
+.referrent p {
   font-size: 1.2rem;
   margin-top: 20px;
   color: white;
@@ -414,6 +414,10 @@ body {
     font-size: 0.875rem;
   }
 
+  .referrent {
+    padding: 20px 25px;
+  }
+
   .referrent h4 {
     font-size: 1.3rem;
   }
@@ -422,11 +426,10 @@ body {
     font-size: 1rem;
   }
 
-  .referrent h6 {
+  .referrent p {
     font-size: 1rem;
     margin-top: 20px;
     color: white;
-    margin-right: 15px;
   }
 }
 
