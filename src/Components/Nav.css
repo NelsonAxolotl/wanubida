@@ -282,7 +282,7 @@
   .navbar-link {
     display: block; /* Afficher les liens en bloc */
     padding: 1.6rem; /* Espacement interne */
-    font-size: 6vw; /* Taille de la police relative à la largeur de l'écran */
+    font-size: 7vw; /* Taille de la police relative à la largeur de l'écran */
     margin: 0; /* Supprimer la marge */
     color: white; /* Couleur du texte */
   }
