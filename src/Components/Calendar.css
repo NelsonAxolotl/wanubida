@@ -181,8 +181,8 @@
 
 /* --------------------Styles pour les cellules sélectionnées----------------- */
 .cell.selected {
-  background-color: #007bff; /* Couleur de fond pour la cellule sélectionnée */
-  color: #fff; /* Couleur du texte */
+  background-color: #fff; /* Couleur de fond pour la cellule sélectionnée */
+  color: #000; /* Couleur du texte */
 }
 
 /* --------------------Styles pour les cellules désactivées------------------ */
