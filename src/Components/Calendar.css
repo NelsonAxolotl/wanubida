@@ -283,7 +283,7 @@
   .days {
     gap: 0; /* Suppression de l'écart entre les jours */
     padding: 0; /* Suppression du padding */
-    font-size: 0.7rem; /* Réduction de la taille de la police */
+    font-size: 0.675rem; /* Réduction de la taille de la police */
   }
 
   .month-label {
