@@ -1,6 +1,5 @@
 footer {
   background: rgb(134 175 185 / 100%);
-  height: 295px;
   padding-top: 20px;
 }
 
@@ -49,13 +48,26 @@ footer {
   animation-play-state: paused;
 }
 
-footer p {
+.footy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footy p {
   color: white;
   font-size: 1.2rem;
   background: rgba(134 175 185 / 100%);
   padding-top: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   text-align: center;
+}
+
+.footy a {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  padding-top: 50px;
+  padding-bottom: 30px;
 }
 
 /* -------------RESPONSIVE----------------- */
@@ -69,10 +81,12 @@ footer p {
 
   .footy p {
     font-size: 0.9rem;
+    padding-bottom: 15px;
   }
 
   .footy a {
     font-size: 0.9rem;
+    padding-top: 0;
   }
 
   .footy span {
