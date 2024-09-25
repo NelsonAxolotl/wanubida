@@ -1,6 +1,6 @@
 /* Styles généraux pour le conteneur principal */
 .lacie {
-  background: rgba(165 92 68 / 100%);
+  background: rgba(228 139 110 / 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -180,7 +180,7 @@
 
 @keyframes color-golden {
   to {
-    color: #8b6914; /* Changement de la couleur du texte */
+    color: goldenrod; /* Changement de la couleur du texte */
   }
 }
 
