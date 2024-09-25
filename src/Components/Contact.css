@@ -170,6 +170,17 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute; /* Cache le texte */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); /* Utilise clipping pour cacher le texte */
+}
+
 /* --------------------------Visitor Information---------------- */
 .venir {
   margin-bottom: 80px;

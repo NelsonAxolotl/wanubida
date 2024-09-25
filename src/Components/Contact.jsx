@@ -80,8 +80,13 @@ const Contact = () => {
               href="https://www.facebook.com/cabaretwanubida"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Suivez-nous sur Facebook"
             >
               <i className="fa-brands fa-facebook"></i>
+              <span className="visually-hidden">
+                Suivez-nous sur Facebook
+              </span>{" "}
+              {/* Utiliser cette méthode pour le texte visible mais caché */}
             </a>
           </div>
           <div className="insta">
@@ -89,8 +94,13 @@ const Contact = () => {
               href="https://www.instagram.com/cabaret_wanubida/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Suivez-nous sur Instagram"
             >
               <i className="fa-brands fa-instagram"></i>
+              <span className="visually-hidden">
+                Suivez-nous sur Instagram
+              </span>{" "}
+              {/* Utiliser cette méthode pour le texte visible mais caché */}
             </a>
           </div>
         </div>
