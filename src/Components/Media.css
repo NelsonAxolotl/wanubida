@@ -35,9 +35,7 @@ body {
   padding-top: 200px;
   font-size: var(--font-size-large);
   text-align: center;
-  color: rgb(
-    0 0 0 / 66.6%
-  ); /* Utilisation de la notation moderne */ /* Utilisation de la notation moderne */
+  color: black; /* Utilisation de la notation moderne */ /* Utilisation de la notation moderne */
   font-family: Rye, serif;
   font-weight: 400;
 }

@@ -102,28 +102,28 @@
 
 /* ------------------Couleurs pour les jours spécifiques------------------- */
 .special-case.wednesday {
-  background-color: pink; /* Couleur de fond pour les mercredis */
+  background-color: #c71585; /* Couleur de fond pour les mercredis */
   display: flex; /* Utilisation du Flexbox */
   flex-direction: column; /* Organisation en colonne */
   align-items: center; /* Alignement au centre horizontalement */
 }
 
 .special-case.friday {
-  background-color: goldenrod; /* Couleur de fond pour les vendredis */
+  background-color: #8b6914; /* Couleur de fond pour les vendredis */
   display: flex; /* Utilisation du Flexbox */
   flex-direction: column; /* Organisation en colonne */
   align-items: center; /* Alignement au centre horizontalement */
 }
 
 .special-case.saturday {
-  background-color: violet; /* Couleur de fond pour les samedis */
+  background-color: #013220; /* Couleur de fond pour les samedis */
   display: flex; /* Utilisation du Flexbox */
   flex-direction: column; /* Organisation en colonne */
   align-items: center; /* Alignement au centre horizontalement */
 }
 
 .special-case.sunday {
-  background-color: rgb(97 151 187 / 100%);
+  background-color: rgba(0, 76, 153, 1);
 
   /* Couleur de fond pour les dimanches */
   display: flex; /* Utilisation du Flexbox */
@@ -188,26 +188,29 @@
 /* --------------------Styles pour les cellules désactivées------------------ */
 .cell.disabled {
   background-color: #f0f0f0; /* Couleur de fond pour les cellules désactivées */
-  color: #ccc; /* Couleur du texte */
+  color: black; /* Couleur du texte */
 }
 
 /* -------------Couleurs pour les jours spécifiques des cellules------------ */
 .cell.wednesday {
-  background-color: pink; /* Couleur de fond pour les mercredis */
+  background-color: #c71585; /* Couleur de fond pour les mercredis */
+  color: #fff;
 }
 
 .cell.friday {
-  background-color: goldenrod; /* Couleur de fond pour les vendredis */
+  background-color: #8b6914; /* Couleur de fond pour les vendredis */
+  color: #fff;
 }
 
 .cell.saturday {
-  background-color: violet; /* Couleur de fond pour les samedis */
+  background-color: #013220; /* Couleur de fond pour les samedis */
+  color: #fff;
 }
 
 .cell.sunday {
-  background-color: rgba(
-    97 151 187 / 100%
-  ); /* Couleur de fond pour les dimanches */
+  background-color: rgba(0, 76, 153, 1);
+  /* Couleur de fond pour les dimanches */
+  color: #fff;
 }
 
 /* ------------------Styles pour les cellules avec événements-------------- */

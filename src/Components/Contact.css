@@ -30,7 +30,7 @@
 
 /* ---------------------------Contact Sections------------------- */
 .contact-section {
-  background: rgb(97 151 187 / 100%);
+  background: rgb(57, 101, 137);
   color: rgb(255 255 255 / 100%);
   border: 1px solid rgb(255 255 255 / 100%);
   border-radius: 5px;
@@ -50,7 +50,7 @@
 }
 
 .contact-section3 {
-  background: rgba(97 151 187 / 100%);
+  background: rgb(57, 101, 137);
   color: rgba(255 255 255 / 100%);
   border: 1px solid rgba(255 255 255 / 100%);
   border-radius: 5px;
@@ -233,6 +233,7 @@ a {
   gap: 15px;
   border: 1px solid white;
   transition: all 0.4s ease-in-out;
+  background: rgb(57, 101, 137);
 }
 
 .lieux:hover {
@@ -250,6 +251,7 @@ a {
   gap: 15px;
   border: 1px solid white;
   transition: all 0.4s ease-in-out;
+  background: rgb(57, 101, 137);
 }
 
 .lieux2:hover {

@@ -64,9 +64,9 @@
 
 /* --------Effet au survol des liens de la barre de navigation-------- */
 .navbar-link:hover {
-  color: goldenrod; /* Couleur du texte au survol */
+  color: #8b6914; /* Couleur du texte au survol */
   transform: scale(1.1);
-  border-bottom: 1px solid goldenrod; /* Bordure inférieure au survol */
+  border-bottom: 1px solid #8b6914; /* Bordure inférieure au survol */
 }
 
 /* -------------------Style pour le bouton de menu burger------- */
@@ -85,7 +85,7 @@
 
 /* ---------Style spécifique pour le lien de la billeterie------- */
 .navbar-link.billeterie {
-  border: 2px solid goldenrod; /* Bordure solide dorée */
+  border: 2px solid #8b6914; /* Bordure solide dorée */
   padding: 5px 10px; /* Espacement interne */
   border-radius: 5px; /* Coins arrondis */
   transition: background-color 0.3s ease, transform 0.4s ease, color 0.3s ease; /* Transitions pour les effets au survol */
@@ -93,7 +93,7 @@
 
 /* -----------Effet au survol du lien de la billeterie------- */
 .navbar-link.billeterie:hover {
-  background-color: goldenrod; /* Couleur de fond au survol */
+  background-color: #8b6914; /* Couleur de fond au survol */
   color: white; /* Couleur du texte au survol */
 }
 
@@ -180,7 +180,7 @@
 
 @keyframes color-golden {
   to {
-    color: goldenrod; /* Changement de la couleur du texte */
+    color: #8b6914; /* Changement de la couleur du texte */
   }
 }
 
@@ -196,7 +196,7 @@
 
 /* ----------Style pour l'élément actif de la barre de navigation------- */
 .navbar-item.active .navbar-link {
-  color: goldenrod; /* Couleur dorée pour le lien actif */
+  color: #8b6914; /* Couleur dorée pour le lien actif */
 }
 
 /* -----------Style pour le lien de la billeterie actif------------ */

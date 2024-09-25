@@ -182,14 +182,14 @@ const Show = () => {
           </p>
         </div>
         <div className="referrent">
-          <h4>Référent technique</h4>
+          <h3>Référent technique</h3>
 
-          <h5>
+          <h4>
             <span>
               <FontAwesomeIcon icon={faEnvelope} />
             </span>
             <a href="mailto:cabaretwanubida@gmx.fr">cabaretwanubida@gmx.fr</a>
-          </h5>
+          </h4>
           <p>
             <span>
               <FontAwesomeIcon icon={faPhone} />

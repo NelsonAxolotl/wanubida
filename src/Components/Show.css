@@ -270,13 +270,13 @@ body {
   background-color: #4499a8;
 }
 
-.referrent h4 {
+.referrent h3 {
   font-size: 1.5rem;
   color: var(--text-light);
   font-weight: normal;
 }
 
-.referrent h5,
+.referrent h4,
 .referrent p {
   display: flex;
   align-items: center;
@@ -417,11 +417,11 @@ body {
     padding: 20px 25px;
   }
 
-  .referrent h4 {
+  .referrent h3 {
     font-size: 1.3rem;
   }
 
-  .referrent h5,
+  .referrent h4,
   .referrent p {
     font-size: 1rem; /* Réduire la taille de la police sur les petits écrans */
   }
