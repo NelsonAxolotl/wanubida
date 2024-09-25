@@ -11,8 +11,29 @@
   font-size: 1.2rem;
 }
 
+.end a {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
 @media (max-width: 760px) {
+  .end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
   .end p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .end a {
+    font-size: 0.9rem;
+  }
+
+  .end span {
+    display: none;
   }
 }

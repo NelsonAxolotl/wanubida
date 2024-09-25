@@ -178,17 +178,17 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p>
-          Copyright © 2024 Compagnie Wanubida | Par
+        <div className="footy">
+          <p>Copyright © 2024 Compagnie Wanubida </p>
           <a
             href="https://cv-react-paraiso-nelson.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            The Cool Axolotl
+            <span> | </span> Par The Cool Axolotl
           </a>
-        </p>
+        </div>
       </footer>
     </>
   );

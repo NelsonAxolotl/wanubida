@@ -3,17 +3,15 @@ const End = () => {
   return (
     <>
       <div className="end">
-        <p>
-          Copyright © 2024 Compagnie Wanubida | Par
-          <a
-            href="https://cv-react-paraiso-nelson.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            The Cool Axolotl
-          </a>
-        </p>
+        <p>Copyright © 2024 Compagnie Wanubida </p>
+        <a
+          href="https://cv-react-paraiso-nelson.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <span>| </span> Par The Cool Axolotl
+        </a>
       </div>
     </>
   );
