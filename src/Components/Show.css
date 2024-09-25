@@ -276,7 +276,11 @@ body {
   font-weight: normal;
 }
 
-.referrent h5 {
+.referrent h5,
+.referrent p {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espace entre l'icône et le texte */
   font-size: 1.1rem;
   color: var(--text-light);
   font-weight: normal;
@@ -290,16 +294,11 @@ body {
 .referrent a {
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
+  color: var(--text-light);
 }
 
 .referrent a:hover {
   color: var(--highlight-color);
-}
-
-.referrent p {
-  font-size: 1.2rem;
-  margin-top: 20px;
-  color: white;
 }
 
 /* ---------------------Media Queries for Responsive Design------------------- */
@@ -422,14 +421,13 @@ body {
     font-size: 1.3rem;
   }
 
-  .referrent h5 {
-    font-size: 1rem;
+  .referrent h5,
+  .referrent p {
+    font-size: 1rem; /* Réduire la taille de la police sur les petits écrans */
   }
 
-  .referrent p {
-    font-size: 1rem;
-    margin-top: 20px;
-    color: white;
+  .referrent a {
+    font-size: 1rem; /* Réduire aussi la taille du lien */
   }
 }
 
