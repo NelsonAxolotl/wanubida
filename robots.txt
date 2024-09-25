@@ -1,3 +1,0 @@
-# Autoriser tous les robots à explorer le site
-User-agent: *
-Disallow:

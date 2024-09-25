@@ -1,0 +1,11 @@
+# Autoriser tous les robots à explorer le site principal
+User-agent: *
+Allow: /
+
+# Sitemap pour aider les moteurs de recherche à indexer le contenu
+Sitemap: https://wanubida.com/sitemap.xml
+
+# Directive pour Googlebot (exemple pour ajuster certains comportements spécifiques)
+User-agent: Googlebot
+Allow: /public/
+Disallow: /search/
