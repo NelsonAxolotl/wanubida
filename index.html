@@ -39,7 +39,7 @@
     />
     <meta
       property="og:image"
-      content="https://wanubida.com/public/affiche.webp"
+      content="https://wanubida.com/public/affiche.jpg"
     />
     <meta
       property="og:image:alt"
@@ -73,7 +73,7 @@
     <link rel="alternate" href="https://wanubida.fr" hreflang="fr-FR" />
 
     <!-- Favicon & Icons -->
-    <link rel="icon" type="image/png" href="/public/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
 
     <!-- Preloading Critical Resources -->
     <link
@@ -110,9 +110,30 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://wanubida.com",
+        "logo": "https://wanubida.com/public/logo.png",
+        "name": "Cabaret Wanubida",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+33-680-540-574",
+          "contactType": "Customer Service"
+        }
+      }
+    </script>
+
     <title>Wanubida - Cabaret Wanubida</title>
   </head>
   <body>
+    <header>
+      <img
+        src="https://wanubida.com/public/logo.png"
+        alt="Logo du Cabaret Wanubida"
+      />
+    </header>
     <div id="root"></div>
 
     <!-- Deferred loading of the main script -->
