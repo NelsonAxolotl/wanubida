@@ -102,6 +102,17 @@ const Billet = () => {
             <p>Roanne (42)</p>
             <h3>2 Octobre 2024</h3>
           </Link>
+          <Link to="/billetterie/event19" className="date-box-billet">
+            <img
+              src={logo}
+              alt="photo du spectale , la tournée du facteur"
+              width="130"
+              height="auto"
+            />
+            <p>14h30h</p>
+            <p>Roanne (42)</p>
+            <h3>3 Octobre 2024</h3>
+          </Link>
           <Link to="/billetterie/event5" className="date-box-billet">
             <img
               src={logo}

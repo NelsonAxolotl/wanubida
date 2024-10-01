@@ -107,6 +107,20 @@ const Main = () => {
         <div className="actus">
           <h2>ACTUS !</h2>
         </div>
+        <div className="oyez">
+          <h3>"ATTENTION ATTENTION"</h3>
+          <p>
+            Oyez oyez ! deux nouvelles représentations en octobre se sont
+            ajoutées à notre calendrier !
+          </p>
+          <p>
+            Venez donc assister au sepctacle les jedui 3 à 14h30 ou vendredi 4 à
+            10h !
+          </p>
+          <p>
+            Un sepectacle de de bonne heure pour une journée de bonne humeur!
+          </p>
+        </div>
         <div className="benevol">
           <h3>
             * Recherche de bénévoles pour montage et démontage de chapiteau

@@ -33,6 +33,7 @@ import Event15 from "./Pages/Event15";
 import Event16 from "./Pages/Event16";
 import Event17 from "./Pages/Event17";
 import Event18 from "./Pages/Event18";
+import Event19 from "./Pages/Event19";
 import NotFound from "./Pages/NotFound";
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
           <Route path="/billetterie/event16" element={<Event16 />} />
           <Route path="/billetterie/event17" element={<Event17 />} />
           <Route path="/billetterie/event18" element={<Event18 />} />
+          <Route path="/billetterie/event19" element={<Event19 />} />
           <Route path="/agenda" element={<Calendar />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

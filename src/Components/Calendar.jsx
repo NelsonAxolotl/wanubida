@@ -49,10 +49,16 @@ const events = [
     time: "16:00",
   },
   {
+    date: "2024-10-03",
+    type: "thursday",
+    link: "/billetterie/event19",
+    time: "10:00",
+  },
+  {
     date: "2024-10-04",
     type: "friday",
     link: "/billetterie/event5",
-    time: "19:00",
+    time: "10:00/19:00",
   },
   {
     date: "2024-10-05",

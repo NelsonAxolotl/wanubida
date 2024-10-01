@@ -23,10 +23,12 @@ const Event5Show = () => {
 
   // IDs de l'événement et de la session
   const eventId = "5afe33ba4eeecdbd75e7776f15987751"; // ID d'événement correct
-  const sessionId = "10510631"; // ID de session correct pour le 4 octobre 2024
+  const sessionIdMorning = "10595462";
+  const sessionIdAfternoon = "10510631"; // ID de session correct pour le 4 octobre 2024
 
   // URL de réservation
-  const reservationUrl = `https://www.billetweb.fr/cabaret-wanubida?eventId=${eventId}&session=${sessionId}`;
+  const reservationUrlMorning = `https://www.billetweb.fr/cabaret-wanubida?eventId=${eventId}&session=${sessionIdMorning}`;
+  const reservationUrlAfternoon = `https://www.billetweb.fr/cabaret-wanubida?eventId=${eventId}&session=${sessionIdAfternoon}`;
 
   return (
     <>
@@ -35,12 +37,12 @@ const Event5Show = () => {
           <div className="text-section20">
             <h4>La tournée du facteur</h4>
             <p>Vendredi 4 Octobre 2024</p>
-            <p>19h</p>
+            <p>10h</p>
             <span>Les jardins partagés d&#39;EntrePote</span>
             <span>99 Rue de Clermont</span>
             <span>42300 Roanne</span>
             <a
-              href={reservationUrl}
+              href={reservationUrlMorning}
               target="_blank"
               rel="noopener noreferrer"
               className="cta-button"
@@ -55,6 +57,35 @@ const Event5Show = () => {
               onClick={() => handleImageClick(pic43)}
               loading="eager"
               className="main-image"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Événement de l'après-midi à 16h */}
+      <div className="event21">
+        <div className="kebab-case-purple2">
+          <div className="text-section20">
+            <h4>La tournée du facteur</h4>
+            <p>Vendredi 4 Octobre 2024</p>
+            <p>19h</p>
+            <span>Les jardins partagés d&#39;EntrePote</span>
+            <span>99 Rue de Clermont</span>
+            <span>42300 Roanne</span>
+            <a
+              href={reservationUrlAfternoon}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button"
+            >
+              Réserver
+            </a>
+          </div>
+          <div className="frame1">
+            <img
+              src={pic43}
+              alt="Image du spectacle La tournée du facteur"
+              onClick={() => handleImageClick(pic43)}
+              loading="lazy"
             />
           </div>
         </div>
