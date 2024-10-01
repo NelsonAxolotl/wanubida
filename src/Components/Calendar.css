@@ -258,6 +258,12 @@
   cursor: pointer;
 }
 
+/* ------------------3 octobre 2024------------------------- */
+.orange-day {
+  background-color: orange;
+  color: white; /* Optionnel, si vous voulez changer la couleur du texte */
+}
+
 /* ---------------Styles responsifs pour les tailles d'écran-------------------- */
 @media (max-width: 865px) {
   .titre h2 {

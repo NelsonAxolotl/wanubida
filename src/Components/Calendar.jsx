@@ -487,6 +487,8 @@ const Calendar = () => {
         );
         const type = event ? event.type : "";
         const time = event ? event.time : "";
+        // Vérification si c'est le 3 octobre
+        const isOrangeDay = format(day, "yyyy-MM-dd") === "2024-10-03";
 
         days.push(
           <div
@@ -495,6 +497,8 @@ const Calendar = () => {
                 ? "disabled"
                 : isSameDay(day, new Date())
                 ? "selected"
+                : isOrangeDay
+                ? "orange-day" // Appliquer la classe orange-day
                 : type
             }`}
             key={day}
