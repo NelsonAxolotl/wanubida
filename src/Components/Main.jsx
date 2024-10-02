@@ -108,7 +108,7 @@ const Main = () => {
           <h2>ACTUS !</h2>
         </div>
         <div className="oyez">
-          <h3>"ATTENTION ATTENTION"</h3>
+          <h3>&quot;ATTENTION ATTENTION&quot;</h3>
           <p>
             Oyez oyez ! deux nouvelles représentations en octobre se sont
             ajoutées à notre calendrier !

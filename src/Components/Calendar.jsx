@@ -474,6 +474,7 @@ const Calendar = () => {
     const endDate = endOfWeek(monthEnd, { locale: fr });
 
     const dateFormat = "d";
+    const today = new Date(); // Date actuelle
     const rows = [];
     let days = [];
     let day = startDate;
@@ -487,6 +488,7 @@ const Calendar = () => {
         );
         const type = event ? event.type : "";
         const time = event ? event.time : "";
+        const isPastEvent = event && parseISO(event.date) < today;
         // Vérification si c'est le 3 octobre
         const isOrangeDay = format(day, "yyyy-MM-dd") === "2024-10-03";
 
@@ -499,10 +501,14 @@ const Calendar = () => {
                 ? "selected"
                 : isOrangeDay
                 ? "orange-day" // Appliquer la classe orange-day
+                : isPastEvent
+                ? "event-past" // Appliquer la classe pour les événements passés
                 : type
             }`}
             key={day}
-            onClick={() => (type === "past" ? null : onDateClick(event))}
+            onClick={() =>
+              isPastEvent || type === "past" ? null : onDateClick(event)
+            }
           >
             {event && <div className="event-indicator" />}
             <span className="number">{formattedDate}</span>

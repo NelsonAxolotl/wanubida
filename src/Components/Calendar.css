@@ -236,6 +236,12 @@
   background-color: #954242; /* Couleur de fond pour les dates passées */
 }
 
+.event-past {
+  background-color: #954242;
+  color: gray;
+  pointer-events: none;
+}
+
 /* ---------------Affichage différent des dates passées au survol------------ */
 .past:hover {
   background-color: #c0c0c0; /* Couleur de fond au survol */
