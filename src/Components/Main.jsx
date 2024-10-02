@@ -114,8 +114,8 @@ const Main = () => {
             ajoutées à notre calendrier !
           </p>
           <p>
-            Venez donc assister au sepctacle les jeudii 3 à 14h30 ou vendredi 4
-            à 10h !
+            Venez donc assister au sepctacle les jeudi 3 à 14h30 ou vendredi 4 à
+            10h !
           </p>
           <p>Un spectacle de bonne heure pour une journée de bonne humeur!</p>
         </div>
