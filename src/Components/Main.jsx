@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "./Main.css";
 import Footer from "../Components/Footer";
 import chap from "../Pics/chapiteau.webp";
@@ -14,7 +14,9 @@ const Main = () => {
   const navigate = useNavigate();
   const [enlargedImage, setEnlargedImage] = useState(null);
   const teaserRef = useRef(null);
-
+  const goToAgendaApril = () => {
+    navigate("/agenda?month=2025-04");
+  };
   // Handle video play and pause
   const handlePlay = useCallback(() => {
     teaserRef.current.classList.add("video-playing");
@@ -96,11 +98,14 @@ const Main = () => {
         </div>
         <div className="roane">
           <p>&quot;Retrouvez-nous à partir</p>
-          <span>du 27 septembre à Roanne&quot;</span>
+          <span>du 18 avril à Quingey&quot;</span>
         </div>
         <div className="button">
-          <Link to="/agenda" aria-label="Voir l'agenda des spectacles">
-            <button>Agenda</button>
+          <Link
+            to="/agenda?month=2025-04"
+            aria-label="Voir l'agenda des spectacles"
+          >
+            <button onClick={goToAgendaApril}>Agenda</button>
           </Link>
         </div>
 
@@ -110,37 +115,20 @@ const Main = () => {
         <div className="oyez">
           <h3>&ldquo;ATTENTION ATTENTION&rdquo;</h3>
           <p>
-            Oyez oyez ! deux nouvelles représentations en octobre se sont
-            ajoutées à notre calendrier !
+            Oyez oyez ! deux nouvelles représentations en avril se sont ajoutées
+            à notre calendrier !
           </p>
           <p>
-            Venez donc assister au sepctacle les jeudi 3 à 14h30 ou vendredi 4 à
-            10h !
+            Venez donc assister au sepctacle le vendredi 18 à 20h, le samedi 19
+            et dimanche 20 à 16h !
           </p>
           <p>Un spectacle de bonne heure pour une journée de bonne humeur!</p>
         </div>
         <div className="benevol">
-          <h3>
-            * Recherche de bénévoles pour montage et démontage de chapiteau
-            ainsi que pour l&rsquo;intendance *
-          </h3>
           <div className="text-benevoles">
-            <p>
-              Nous cherchons des personnes pour le montage et le démontage du
-              chapiteau : <br /> - A Roanne le 15 septembre (montage) et le 8
-              octobre (démontage), <br /> - A Chasselay le 9 octobre (montage)
-              et le 5 novembre (démontage). <br />
-              Durant la tournée, il nous faudra bien manger ! <br />
-              Pour participer à la préparation des repas durant la résidence et
-              le jeu : <br /> - Du 15 septembre au 8 octobre à Roanne. <br />-
-              Du 9 octobre au 17 octobre à Chasselay.
-            </p>
             <span>
               <Link to="/contacts">Contactez-nous !</Link>
             </span>
-          </div>
-          <div className="h-benevole">
-            <p>Tous dons bienvenus !</p>
           </div>
         </div>
         <div className="contact-wrapper">
@@ -155,29 +143,6 @@ const Main = () => {
               tabIndex="0"
               onKeyPress={(e) => e.key === "Enter" && handleImageClick(chap5)} // Accessibility
             />
-          </div>
-          <div className="contact-section-main">
-            <p>Référente bénévoles :</p>
-            <div className="mail">
-              <span>
-                <FontAwesomeIcon icon={faEnvelope} />
-              </span>
-              <span>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="mailto:cabaretwanubida@gmx.fr"
-                >
-                  cabaretwanubida@gmx.fr
-                </a>
-              </span>
-            </div>
-            <div className="phone">
-              <span>
-                <FontAwesomeIcon icon={faPhone} />
-              </span>
-              <span>Sarah : 06 31 22 48 54</span>
-            </div>
           </div>
         </div>
         <div className="all-press">

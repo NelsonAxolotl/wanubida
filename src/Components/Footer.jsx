@@ -6,7 +6,7 @@ import fabrik from "../Pics/fabrik.webp";
 import potes from "../Pics/potes.webp";
 import monts from "../Pics/monts.webp";
 import lechap from "../Pics/chap.webp";
-import clement from "../Pics/clement.webp";
+import clement from "../Pics/stclement.jpg";
 import clem from "../Pics/clem.webp";
 
 const Footer = () => {
@@ -78,7 +78,7 @@ const Footer = () => {
               <img src={lechap} alt="asso lechap" width="200" height="200" />
             </a>
             <a
-              href="https://www.saint-clement-de-la-place.fr/"
+              href="https://saintclementlesplaces.fr/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -158,7 +158,7 @@ const Footer = () => {
               <img src={lechap} alt="asso lechap" width="200" height="auto" />
             </a>
             <a
-              href="https://www.saint-clement-de-la-place.fr/"
+              href="https://saintclementlesplaces.fr/"
               target="_blank"
               rel="noopener noreferrer"
             >

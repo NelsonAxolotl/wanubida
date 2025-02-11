@@ -31,12 +31,12 @@ const Event1Show = () => {
         <div className="kebab-case-green">
           <div className="text-section30">
             <h4>La tournée du facteur</h4>
-            <h5 className="diagonal-text">Première</h5>
-            <p>Vendredi 27 septembre 2024</p>
-            <p>19h</p>
-            <span>Les jardins partagés d&#39;EntrePote</span>
-            <span>99 Rue de Clermont</span>
-            <span>42300 Roanne</span>
+
+            <p>Vendredi 18 avril 2025</p>
+            <p>20h</p>
+            <span>La Mal Lunée</span>
+            <span>6 route d'Omans</span>
+            <span>25440 Quingey</span>
             <a
               href={reservationUrl}
               target="_blank"

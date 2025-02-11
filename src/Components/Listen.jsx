@@ -171,6 +171,7 @@ const Listen = () => {
             </div>
           </div>
         </div>
+        <div className="divider2"></div>
       </div>
 
       {enlargedImage && (

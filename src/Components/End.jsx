@@ -5,7 +5,7 @@ const End = () => {
       <div className="end">
         <p>Copyright © 2024 Compagnie Wanubida </p>
         <a
-          href="https://cv-react-paraiso-nelson.netlify.app/"
+          href="https://www.thecoolaxolotl.com"
           target="_blank"
           rel="noopener noreferrer"
         >

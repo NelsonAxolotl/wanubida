@@ -78,7 +78,7 @@ const Show = () => {
           <h2>-Kahem-</h2>
 
           <h3>Cirque poétique et absurde</h3>
-          <span>Durée : 1h15</span>
+          <span>Durée : 1h30</span>
           <p>Spectacle tout public à partir de 5 ans</p>
         </div>
         <div className="facteur">

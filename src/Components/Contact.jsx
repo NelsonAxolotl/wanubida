@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Contact.css";
-import LeafletMap from "./LeafletMap";
-import LeafletMap2 from "./LeafletMap2";
+import LeafletMap3 from "./LeafletMap3";
 import End from "../Components/End";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -106,54 +105,39 @@ const Contact = () => {
         </div>
 
         <div className="venir">
-          <h2>Lieux du Spectacle</h2>
+          <h2>Lieu du Spectacle</h2>
           <p>LA TOURNÉE DU FACTEUR</p>
         </div>
         <div className="spanny">
-          <span>Septembre/Octobre 2024</span>
+          <span>Avril 2025</span>
         </div>
         <div className="map-container">
           <div className="lieux">
             <Link
-              to="https://www.entrepote.org/?Evenements"
+              to="https://www.associationmallunee.com/accueil-de-spectacles"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h3>-Les jardins partagés-</h3>
-              <h4>d&apos;EntrePote</h4>
+              <h3>-La Mal Lunée-</h3>
             </Link>
-            <p> 99 Rue de Clermont, 42300 Roanne</p>
+            <p> 6 route D'omans, 25440 Quingey</p>
+
             <p>
               <span>
                 <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
               </span>
-              09 54 47 25 16
+              06 17 51 03 18
             </p>
+
+            <span>
+              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+
+              <a target="_blank" href="mailto:asso.mal.lunee@gmail.com">
+                asso.mal.lunee@gmail.com
+              </a>
+            </span>
           </div>
-          <LeafletMap />
-        </div>
-        <div className="spanni">
-          <span>Octobre/Novembre 2024</span>
-        </div>
-        <div className="map-container2">
-          <div className="lieux2">
-            <Link
-              to="https://www.lapremiereseconde.fr/chateau-de-machy/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h3>-Château de Machy-</h3>
-            </Link>
-            <p> 1044 Chemin de Machy</p>
-            <p>69380 Chasselay</p>
-            <p>
-              <span>
-                <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
-              </span>
-              04 78 47 34 32
-            </p>
-          </div>
-          <LeafletMap2 />
+          <LeafletMap3 />
         </div>
       </div>
       <div className="pic-contact">

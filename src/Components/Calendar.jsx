@@ -25,6 +25,24 @@ import groupe3 from "../Pics/groupe3.webp";
 // Liste des événements avec des classes spéciales pour certaines dates
 const events = [
   {
+    date: "2025-04-18",
+    type: "friday",
+    link: "/billetterie/",
+    time: "20:00",
+  },
+  {
+    date: "2025-04-19",
+    type: "saturday",
+    link: "/billetterie/",
+    time: "16:00",
+  },
+  {
+    date: "2025-04-20",
+    type: "sunday",
+    link: "/billetterie/",
+    time: "16:00",
+  },
+  {
     date: "2024-09-27",
     type: "friday",
     link: "/billetterie/event1",
@@ -438,7 +456,7 @@ const Calendar = () => {
           Mercredi <span>16h</span>
         </div>
         <div className="special-case friday">
-          Vendredi <span> 19h</span>
+          Vendredi <span> 20h</span>
         </div>
         <div className="special-case saturday">
           Samedi <span>16h</span>
