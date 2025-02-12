@@ -29,19 +29,34 @@ const Contact = () => {
                 <p>
                   <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
                 </p>
-                <p>Sarah : 06 31 22 48 54</p>
+                <p>
+                  Sarah :{" "}
+                  <a href="tel:+33617806715" className="contact-phone">
+                    06 31 22 48 54
+                  </a>
+                </p>
               </div>
               <div className="emilie">
                 <p>
                   <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
                 </p>
-                <p>Emilie : 06 24 96 29 25</p>
+                <p>
+                  Emilie :{" "}
+                  <a href="tel:+33624962925" className="contact-phone">
+                    06 24 96 29 25
+                  </a>
+                </p>
               </div>
               <div className="corentin">
                 <p>
                   <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
                 </p>
-                <span>Corentin : 06 80 54 05 74</span>
+                <span>
+                  Corentin :{" "}
+                  <a href="tel:+33680540574" className="contact-phone">
+                    06 80 54 05 74
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -64,7 +79,12 @@ const Contact = () => {
                 <span>
                   <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
                 </span>
-                <span>Sarah : 06 31 22 48 54</span>
+                <span>
+                  Sarah :{" "}
+                  <a href="tel:+33631224854" className="contact-phone">
+                    06 31 22 48 54
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -126,16 +146,20 @@ const Contact = () => {
               <span>
                 <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
               </span>
-              06 17 51 03 18
-            </p>
-
-            <span>
-              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-
-              <a target="_blank" href="mailto:asso.mal.lunee@gmail.com">
-                asso.mal.lunee@gmail.com
+              <a href="tel:+33617510118" className="contact-phone">
+                06 17 51 01 18
               </a>
-            </span>
+            </p>
+            <div className="spounge">
+              <span>
+                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+              </span>
+              <span>
+                <a target="_blank" href="mailto:asso.mal.lunee@gmail.com">
+                  asso.mal.lunee@gmail.com
+                </a>
+              </span>
+            </div>
           </div>
           <LeafletMap3 />
         </div>

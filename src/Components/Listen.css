@@ -16,6 +16,7 @@
   font-family: Rye, serif;
   font-weight: 400;
   font-style: normal;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* ------------------------------Son Section--------------------------- */
@@ -34,7 +35,7 @@
   max-width: 600px;
   height: auto;
   border-radius: 8px;
-  border: 1px solid white;
+  border: 2px solid white;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -53,8 +54,10 @@
   color: white;
   border: none;
   border-radius: 8px;
+  border: 1px solid white;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.8s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .audio-control button:hover {
@@ -79,6 +82,7 @@
   color: white;
   font-size: 1.3rem;
   margin: 40px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ---------------------------Teaser Listen Section------------------------- */
@@ -95,6 +99,7 @@
 
 .teaser-listen h2 {
   font-size: 3rem;
+  font-weight: 510;
   margin: 0;
   text-align: center;
   margin-bottom: 20px;
@@ -109,12 +114,13 @@
   border-radius: 8px;
   overflow: hidden;
   transition: background-color 0.3s, border 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .video-container-listen video {
   width: 100%;
   height: auto;
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 .teaser-listen.video-playing {
@@ -143,6 +149,7 @@
   margin-top: 80px;
   text-align: center;
   font-weight: normal;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .divider {
@@ -249,6 +256,65 @@
   cursor: pointer;
   top: 10px;
   right: 10px;
+}
+
+/* --------------------------Album------------------------------- */
+.zic {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 80px;
+  margin-top: 80px;
+}
+
+.zic img {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid white;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.zic img:hover {
+  transform: scale(1.03);
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album p {
+  color: white;
+  font-size: 1.8rem;
+  margin: 20px;
+  font-weight: 510;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.album span {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.linksong a {
+  font-size: 1.5rem;
+  font-weight: 510;
+  transition: all 0.8s ease-in-out;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.linksong a:hover {
+  color: goldenrod;
 }
 
 /* --------------------------Responsive Styles------------------------------- */

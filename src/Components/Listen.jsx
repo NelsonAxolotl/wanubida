@@ -26,6 +26,7 @@ import pic44 from "../Pics/44.webp";
 import pic60 from "../Pics/60.webp";
 import pic61 from "../Pics/61.webp";
 import pic62 from "../Pics/62.webp";
+import zic from "../Pics/wanuzicy.webp";
 
 const images = [
   { src: pic1, alt: "Photo 1" },
@@ -172,6 +173,29 @@ const Listen = () => {
           </div>
         </div>
         <div className="divider2"></div>
+        <div className="zic">
+          <div className="linksong">
+            <a
+              href="https://cabaretwanubida.bandcamp.com/album/cabaret-wanubida-la-tourn-e-du-facteur"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="album-link"
+            >
+              🎶 Écouter l'album sur Bandcamp
+            </a>
+          </div>
+          <div className="album">
+            <p>L'album </p>
+
+            <img
+              src={zic}
+              alt="album cober"
+              onClick={() => handleImageClick(zic)}
+              loading="lazy"
+            />
+            <span>Produit par la Cie Wanubida | © tous droits réservés</span>
+          </div>
+        </div>
       </div>
 
       {enlargedImage && (

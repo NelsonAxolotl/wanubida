@@ -200,7 +200,10 @@ const Media = () => {
             <span>
               <FontAwesomeIcon icon={faPhone} />
             </span>
-            Emilie : 06 24 96 29 25
+            Emilie :{" "}
+            <a href="tel:+33624962925" className="contact-phone">
+              06 24 96 29 25
+            </a>
           </h5>
         </div>
       </div>

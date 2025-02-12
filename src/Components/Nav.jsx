@@ -1,51 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Nav.css";
 import logo from "../Pics/logo.webp";
 
 const Nav = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const [showCompanyName, setShowCompanyName] = useState(true);
-  const [showHomePage, setShowHomePage] = useState(false);
+  const [showHomePage, setShowHomePage] = useState(true); // Lancer directement la page d'accueil
   const navigate = useNavigate();
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
 
   const handleShowLinks = () => setShowLinks((prev) => !prev);
-
-  useEffect(() => {
-    const companyLetters = document.querySelectorAll(".company-name .letter");
-
-    // Function to show letters with a delay
-    const showLetters = () => {
-      companyLetters.forEach((letter, index) => {
-        setTimeout(() => {
-          letter.style.opacity = "1";
-        }, index * 500);
-      });
-
-      // Show home page after all letters are shown
-      setTimeout(() => {
-        setShowHomePage(true);
-      }, companyLetters.length * 500 + 200);
-    };
-
-    // Function to hide company name
-    const hideCompanyName = () => {
-      setShowCompanyName(false);
-    };
-
-    showLetters();
-
-    // Schedule hiding the company name
-    const timer = setTimeout(
-      hideCompanyName,
-      (companyLetters.length + 1) * 500 + 200
-    );
-
-    // Cleanup function to clear the timeout
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleNavClick = (path) => {
     setShowLinks(false);
@@ -55,15 +20,7 @@ const Nav = () => {
 
   return (
     <>
-      {showCompanyName && (
-        <div className={`company-name ${showHomePage ? "fade-out" : ""}`}>
-          {"WANUBIDA".split("").map((char, index) => (
-            <span key={index} className="letter">
-              {char}
-            </span>
-          ))}
-        </div>
-      )}
+      {/* La section avec le nom de la compagnie est supprimée */}
       <div className={`home-page ${showHomePage ? "fade-in" : ""}`}></div>
       <nav
         className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}

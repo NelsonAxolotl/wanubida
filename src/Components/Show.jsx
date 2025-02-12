@@ -194,7 +194,10 @@ const Show = () => {
             <span>
               <FontAwesomeIcon icon={faPhone} />
             </span>
-            Corentin : 06 80 54 05 74
+            Corentin :{" "}
+            <a href="tel:+33680540574" className="contact-phone">
+              06 80 54 05 74
+            </a>
           </p>
         </div>
       </div>

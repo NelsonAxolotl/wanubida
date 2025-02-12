@@ -38,6 +38,7 @@ body {
   color: black; /* Utilisation de la notation moderne */ /* Utilisation de la notation moderne */
   font-family: Rye, serif;
   font-weight: 400;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* -------------------------Title Media Section------------------------------- */
@@ -47,6 +48,7 @@ body {
   padding: 10px;
   font-weight: normal;
   color: var(--highlight-color);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .tittle-media h2 {
@@ -65,17 +67,19 @@ body {
   color: var(--text-light);
   padding: 15px 20px;
   font-size: var(--font-size-button);
-  border: 1px solid var(--text-light);
+  border: 2px solid var(--text-light);
   border-radius: 5px;
   cursor: pointer;
   margin: 20px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .li button:hover,
 .li button.active {
   background-color: var(--button-hover-color);
   border-color: var(--button-hover-color);
+  border: 2px solid var(--text-light);
 }
 
 /* ----------------------------Blur Background Section--------------------------- */
@@ -89,10 +93,11 @@ body {
 
 .blur-background span {
   color: var(--blur-font-color);
+  font-weight: 510;
 }
 
 .blur-background p {
-  text-align: justify;
+  text-align: left;
   padding: 10px 0;
   font-size: 1.1rem;
   font-weight: normal;
@@ -109,6 +114,7 @@ body {
   display: flex;
   align-items: center;
   margin: 50px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .texte-media {
@@ -139,9 +145,10 @@ body {
 .parcours-img2,
 .parcours-img3 {
   border-radius: 10px;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .parcours-img:hover,
@@ -168,6 +175,7 @@ body {
   width: 100%;
   overflow: hidden;
   margin-bottom: -10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .media-pic img {
@@ -188,8 +196,9 @@ body {
   margin-top: 30px;
   border-radius: 5px;
   color: var(--text-light);
-  transition: 0.3s ease-in-out;
+  transition: 0.8s ease-in-out;
   margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .referent2:hover {
@@ -202,17 +211,19 @@ body {
 }
 
 .referent2 a:hover {
-  color: var(--highlight-color);
+  color: goldenrod;
 }
 
 .referent2 h4 {
   margin: 10px;
   font-size: 1.3rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .referent2 h5 {
   margin: 10px;
   font-size: 1.1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .referent2 span {

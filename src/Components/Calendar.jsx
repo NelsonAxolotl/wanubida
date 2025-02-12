@@ -27,19 +27,19 @@ const events = [
   {
     date: "2025-04-18",
     type: "friday",
-    link: "/billetterie/",
+    link: "/billetterie/event1",
     time: "20:00",
   },
   {
     date: "2025-04-19",
     type: "saturday",
-    link: "/billetterie/",
+    link: "/billetterie/event2",
     time: "16:00",
   },
   {
     date: "2025-04-20",
     type: "sunday",
-    link: "/billetterie/",
+    link: "/billetterie/event3",
     time: "16:00",
   },
   {

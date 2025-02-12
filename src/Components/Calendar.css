@@ -11,6 +11,7 @@
   margin-top: 170px; /* Marge en haut du titre */
   font-size: 4.5rem; /* Taille de la police */
   color: brown; /* Couleur du texte */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* -----------------Styles pour la page de calendrier------------------ */
@@ -33,7 +34,7 @@
   margin: 20px auto; /* Marge automatique centrée horizontalement */
   margin-top: 60px; /* Marge en haut */
   margin-bottom: 60px; /* Marge en bas */
-  background: rgb(237 163 163 / 100%); /* Couleur de fond */
+  background: rgb(124, 136, 197); /* Couleur de fond */
   padding-bottom: 50px; /* Espacement intérieur en bas */
   border-radius: 10px; /* Bordures arrondies */
   box-shadow: 0 4px 8px rgba(0 0 0 / 10%); /* Ombre portée, notation moderne */
@@ -73,6 +74,9 @@
 .month-label {
   font-size: 1.4rem; /* Taille de la police pour les labels des mois */
   font-weight: normal; /* Poids de la police */
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 510;
 }
 
 .col-end {
@@ -91,6 +95,7 @@
   justify-content: space-around; /* Espacement entre les éléments */
   padding: 10px 0; /* Espacement intérieur vertical */
   background-color: #f0f0f0; /* Couleur de fond */
+  border: 1px solid white;
 }
 
 .special-case {
@@ -98,6 +103,7 @@
   border-radius: 5px; /* Bordures arrondies */
   font-weight: normal; /* Poids de la police */
   color: #fff; /* Couleur du texte */
+  border: 1px solid white;
 }
 
 /* ------------------Couleurs pour les jours spécifiques------------------- */
@@ -106,6 +112,7 @@
   display: flex; /* Utilisation du Flexbox */
   flex-direction: column; /* Organisation en colonne */
   align-items: center; /* Alignement au centre horizontalement */
+  border: 2px solid white;
 }
 
 .special-case.friday {
@@ -113,6 +120,7 @@
   display: flex; /* Utilisation du Flexbox */
   flex-direction: column; /* Organisation en colonne */
   align-items: center; /* Alignement au centre horizontalement */
+  border: 2px solid white;
 }
 
 .special-case.saturday {
@@ -120,11 +128,12 @@
   display: flex; /* Utilisation du Flexbox */
   flex-direction: column; /* Organisation en colonne */
   align-items: center; /* Alignement au centre horizontalement */
+  border: 2px solid white;
 }
 
 .special-case.sunday {
   background-color: rgba(0, 76, 153, 1);
-
+  border: 2px solid white;
   /* Couleur de fond pour les dimanches */
   display: flex; /* Utilisation du Flexbox */
   flex-direction: column; /* Organisation en colonne */
@@ -136,6 +145,7 @@
   display: flex; /* Utilisation du Flexbox */
   flex-direction: column; /* Organisation en colonne */
   align-items: center; /* Alignement au centre horizontalement */
+  border: 2px solid white;
 }
 
 /* --------------------Styles pour les jours du calendrier--------------- */

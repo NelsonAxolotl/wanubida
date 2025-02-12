@@ -56,9 +56,10 @@
   padding: 10px 20px; /* Espacement interne des liens */
   cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
   margin-left: 25px; /* Marge à gauche des liens */
-  font-size: 19px; /* Taille de la police */
-  font-weight: 500; /* Épaisseur de la police */
-  color: rgb(0 0 0); /* Couleur du texte des liens */
+  font-size: 20px; /* Taille de la police */
+  font-weight: 510; /* Épaisseur de la police */
+  color: rgb(86, 84, 84); /* Couleur du texte des liens */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   transition: color 0.3s ease, transform 0.4s ease;
 }
 

@@ -114,15 +114,17 @@ const Main = () => {
         </div>
         <div className="oyez">
           <h3>&ldquo;ATTENTION ATTENTION&rdquo;</h3>
-          <p>
-            Oyez oyez ! deux nouvelles représentations en avril se sont ajoutées
-            à notre calendrier !
-          </p>
-          <p>
-            Venez donc assister au sepctacle le vendredi 18 à 20h, le samedi 19
-            et dimanche 20 à 16h !
-          </p>
-          <p>Un spectacle de bonne heure pour une journée de bonne humeur!</p>
+          <div className="bliss">
+            <p>
+              Oyez oyez ! deux nouvelles représentations en avril se sont
+              ajoutées à notre calendrier !
+            </p>
+            <p>
+              Venez donc assister au sepctacle le vendredi 18 à 20h, le samedi
+              19 et dimanche 20 à 16h !
+            </p>
+            <p>Un spectacle de bonne heure pour une journée de bonne humeur!</p>
+          </div>
         </div>
         <div className="benevol">
           <div className="text-benevoles">
@@ -241,7 +243,7 @@ const Main = () => {
           </div>
         </div>
         <div className="tournee">
-          <p>L&apos;équipe prépare sa 3ème tournée ! </p>
+          <p>L&apos;équipe prépare sa 4ème tournée ! </p>
           <p>
             La Cie s&rsquo;agrandit, s&rsquo;équipe d&rsquo;un nouveau parquet
             et fabrique un nouvel espace d&rsquo;accueil public qui en jette !

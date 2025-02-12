@@ -40,7 +40,7 @@ const Billet = () => {
           <h2>-Kakem-</h2>
         </div>
         <div className="dates-automne">
-          <h3>Les dates du printmeps</h3>
+          <h3>Les dates du printemps</h3>
           <span>
             <FontAwesomeIcon icon={faLeaf}></FontAwesomeIcon>
           </span>
@@ -107,7 +107,12 @@ const Billet = () => {
                 <span>
                   <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
                 </span>
-                <span>Sarah : 06 31 22 48 54</span>
+                <span>
+                  Sarah :{" "}
+                  <a href="tel:+33631224854" className="contact-phone">
+                    06 31 22 48 54
+                  </a>
+                </span>
               </div>
               <div className="site">
                 <span>

@@ -479,13 +479,13 @@ const Lacie = () => {
                   le choix de créer pour ce lieu mythique qu&#39;est le
                   chapiteau sont les principaux ingrédients nécessaires à{" "}
                   <span>l&#39;équipe du Cabaret Wanubida</span> pour assurer
-                  <span>l&#39;inclusion</span> de toutes et tous, artistes et
+                  <span> l&#39;inclusion</span> de toutes et tous, artistes et
                   public. <br />
                   Le chapiteau, avec sa structure légère, peut s&#39;implanter
                   dans des lieux où l&#39;accès à la culture est inexistant.{" "}
                   <br />
                   Sa forme enveloppante, l&#39;imaginaire associé de spectacles
-                  <span>&quot;accessibles à toustes&quot;</span>, en opposition
+                  <span> &quot;accessibles à toustes&quot;</span>, en opposition
                   aux salles, potentiellement intimidantes, et puis la
                   modularité de l&#39;espace permet à tous les publics de venir
                   assister au spectacle sans problématique d&#39;accès physique
@@ -507,16 +507,16 @@ const Lacie = () => {
               {activeSection === "partage" && (
                 <p>
                   Se goûte et se respire à chaque minute du spectacle et de la
-                  vie du collectif. <br />
-                  Les artistes brisent <span>le 4ème mur</span> et dialoguent
-                  directement avec le public, le prennent à partie, sans pour
-                  autant le contraindre. <br />
+                  vie du collectif. Les artistes brisent{" "}
+                  <span>le 4ème mur</span> et dialoguent directement avec le
+                  public, le prennent à partie, sans pour autant le contraindre.{" "}
+                  <br />
                   Ce dernier est largement invité à participer tout au long du
                   spectacle. <br />
                   La vie en collectif, propre à la tournée de cirque, être
                   accueillis et aidés par nos hôtes, par de nombreux bénévoles
                   venus de tous horizons, nous invite à
-                  <span>un riche partage de vie</span> et de travail.
+                  <span> un riche partage de vie</span> et de travail.
                 </p>
               )}
             </div>
