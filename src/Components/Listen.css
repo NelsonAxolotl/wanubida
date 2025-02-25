@@ -166,6 +166,13 @@
   background-color: goldenrod;
 }
 
+.divider3 {
+  width: 35%;
+  height: 0.1px;
+  margin-top: 50px;
+  background-color: goldenrod;
+}
+
 .gallery-container {
   width: 60%;
   margin: 0 auto;
@@ -315,8 +322,22 @@
 
 .linksong a:hover {
   color: goldenrod;
+  transform: scale(1.1);
 }
 
+.album-link {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.album-link:hover {
+  transform: scale(1.1); /* Augmente légèrement la taille */
+  color: goldenrod;
+}
 /* --------------------------Responsive Styles------------------------------- */
 
 @media (max-width: 1200px) {
@@ -377,6 +398,7 @@
   .son {
     flex-direction: column;
     margin-top: 80px;
+    margin-bottom: -60px;
   }
 
   .son img {
@@ -427,5 +449,28 @@
 
   .gallery-image {
     height: 300px;
+  }
+
+  .divider3 {
+    margin-bottom: -20px;
+  }
+
+  .zic {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .album p {
+    margin-bottom: 40px;
+  }
+
+  .album span {
+    font-size: 1rem;
+  }
+
+  .linksong a {
+    font-size: 1.3rem;
   }
 }
