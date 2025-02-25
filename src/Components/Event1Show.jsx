@@ -20,10 +20,11 @@ const Event1Show = () => {
     setEnlargedImage(null);
   }, []);
 
-  const eventId = "5afe33ba4eeecdbd75e7776f15987751";
-  const sessionId = "10510627";
+  // const eventId = "1225683";
+  // const sessionId = "11069257";
 
-  const reservationUrl = `https://www.billetweb.fr/cabaret-wanubida?eventId=${eventId}&session=${sessionId}`;
+  const reservationUrl =
+    "https://www.billetweb.fr/shop.php?event=1225683&margin=no_margin&color=635BFF&cross_shop=u29201&step=1&session=11069257";
 
   return (
     <>

@@ -21,11 +21,12 @@ const Event2Show = () => {
   }, []);
 
   // ID de l'événement et de la session
-  const eventId = "1167795";
-  const sessionId = "10510628";
+  // const eventId = "1167795";
+  // const sessionId = "10510628";
 
   // URL de réservation
-  const reservationUrl = `https://www.billetweb.fr/shop.php?event=${eventId}&color=635BFF&page=1&margin=no_margin&session=${sessionId}`;
+  const reservationUrl =
+    "https://www.billetweb.fr/shop.php?event=1225683&margin=no_margin&color=635BFF&cross_shop=u29201&step=1&session=11069258";
 
   return (
     <>
