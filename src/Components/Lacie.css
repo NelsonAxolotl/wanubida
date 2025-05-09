@@ -188,7 +188,7 @@
   align-items: center;
   justify-content: center;
   border: 5px solid goldenrod;
-  background: rgba(237 235 235 / 100%);
+  background: rgb(234, 231, 231);
   border-radius: 10px;
   padding: 20px;
   width: 100%;
@@ -209,7 +209,8 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out,
+    color 0.8s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,19 +228,26 @@
 
 .text1:hover .hover-text {
   opacity: 1;
-  transform: scale(1.2);
-  font-size: 1.5em;
+  transform: scale(1.8);
+
   font-weight: normal;
 }
 
 .text1 .hover-text {
   opacity: 0;
   transform: scale(1);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out,
+    color 0.8s ease-in-out;
 }
 
 .hover-text {
   color: white;
+  font-size: 1.5em; /* taille de base fixe */
+  transform: scale(1);
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out,
+    color 0.8s ease-in-out;
+  will-change: transform, opacity;
 }
 
 .text1 h3 {
@@ -248,6 +256,11 @@
   font-weight: normal;
   text-align: center;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: color 0.8s ease-in-out;
+}
+
+.text1:hover h3 {
+  color: white;
 }
 
 .text1 p {
@@ -261,9 +274,24 @@
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.line {
+  width: 55%;
+  height: 0;
+  border-top: 2px dotted rgb(243, 242, 240);
+  margin-top: 100px;
+}
+
+.line2 {
+  width: 55%;
+  height: 0;
+  border-top: 2px dotted rgb(243, 242, 240);
+  margin-bottom: 80px;
+}
+
 .valeurs h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   margin-top: 100px;
+  margin-bottom: 30px;
   font-size: 2.7rem;
   color: rgba(255 255 255 / 100%);
   font-weight: 510;
@@ -283,7 +311,10 @@
 }
 
 .valeur-text p {
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .intro {
@@ -498,7 +529,7 @@
   font-size: 1.1rem;
   color: black;
   background-color: wheat;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
@@ -508,7 +539,7 @@
 
 .download-button1:hover {
   background-color: goldenrod;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
 }
 

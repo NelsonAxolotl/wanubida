@@ -35,8 +35,25 @@ import cafeflyer from "../Pics/cafeflyer.webp";
 import corentin4 from "../Pics/corentin4.webp";
 import Emilie from "../Pics/Emilie.webp";
 import Sarah from "../Pics/Sarah.webp";
+import Nathan from "../Pics/nathan.webp";
 
 const Lacie = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll(".animate-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   const teaserRef = useRef(null);
   const [enlargedImage, setEnlargedImage] = useState(null);
 
@@ -49,6 +66,7 @@ const Lacie = () => {
     Emilie: 0,
     Ulysse: 0,
     Ernestine: 0,
+    Nathan: 0,
     tda: 0,
     Coco: 0,
   });
@@ -130,6 +148,12 @@ const Lacie = () => {
             prevIndexes.Ernestine === 2 ? 0 : prevIndexes.Ernestine + 1,
         }));
       }, 6000),
+      Nathan: setInterval(() => {
+        setCurrentImageIndexes((prevIndexes) => ({
+          ...prevIndexes,
+          Nathan: prevIndexes.Nathan === 2 ? 0 : prevIndexes.Nathan + 1,
+        }));
+      }, 6000),
       Coco: setInterval(() => {
         setCurrentImageIndexes((prevIndexes) => ({
           ...prevIndexes,
@@ -150,15 +174,15 @@ const Lacie = () => {
   return (
     <>
       <div className="lacie">
-        <div className="lacie-titre">
+        <div className="lacie-titre animate-on-scroll">
           <h1>La Compagnie</h1>
           <h2>Wanubida</h2>
         </div>
-        <div className="historique">
+        <div className="historique animate-on-scroll">
           <h2>Historique</h2>
         </div>
         <div className="intro">
-          <div className="lacie-text">
+          <div className="lacie-text animate-on-scroll">
             <p>
               Elle voit le jour en 2020 sous l’impulsion de Pierre, Corentin et
               Gauthier. Ils réunissent une équipe de 8 artistes issus de
@@ -167,15 +191,15 @@ const Lacie = () => {
             </p>
           </div>
         </div>
-        <div className="equipe-titre">
+        <div className="equipe-titre animate-on-scroll">
           <h2>L&rsquo;ÉQUIPE</h2>
         </div>
-        <div className="cabaret">
+        <div className="cabaret animate-on-scroll">
           <h3>Cabaret Wanubida</h3>
         </div>
         <div className="artistes">
-          <div className="personne-reverse">
-            <div className="pic1">
+          <div className="personne-reverse ">
+            <div className="pic1 animate-on-scroll">
               <img
                 src={pic32}
                 alt="Corentin Boisset, artiste de La Compagnie Wanubida"
@@ -195,7 +219,7 @@ const Lacie = () => {
                 loading="lazy"
               />
             </div>
-            <div className="text1">
+            <div className="text1 animate-on-scroll">
               <h3>Corentin Boisset</h3>
               <p className="main-text">
                 Clown et danseur, il est touchant et drôle par sa maladresse et
@@ -208,7 +232,7 @@ const Lacie = () => {
           </div>
 
           <div className="personne">
-            <div className="text1">
+            <div className="text1 animate-on-scroll">
               <h3>Gauthier Koch</h3>
               <p className="main-text">
                 Clown, musicien, auteur compositeur interprète et Alsacien, il
@@ -220,7 +244,7 @@ const Lacie = () => {
               </p>
               <p className="hover-text">Le frère du Jardinier</p>
             </div>
-            <div className="pic1">
+            <div className="pic1 animate-on-scroll">
               <img
                 src={Gauthier}
                 alt="Gauthier Koch, artiste de La Compagnie Wanubida"
@@ -243,7 +267,7 @@ const Lacie = () => {
           </div>
 
           <div className="personne-reverse">
-            <div className="pic1">
+            <div className="pic1 animate-on-scroll">
               <img
                 src={Pierre3}
                 alt="Pierre Auguste, artiste de La Compagnie Wanubida"
@@ -263,21 +287,20 @@ const Lacie = () => {
                 loading="lazy"
               />
             </div>
-            <div className="text1">
+            <div className="text1 animate-on-scroll">
               <h3>Pierre Auguste</h3>
               <p className="main-text">
                 Acrobate touche-à-tout, jongleur et poète de l&#39;existence, il
                 croque la vie à pleines dents ! <br />
-                Pierre prête son énergie débordante et son enthousiasme à
-                Contenterie, le jardinier, qui fera pousser aussi bien les
-                sourires sur vos visages et la joie dans vos cœurs que les
-                fleurs du jardin.
+                Pierre prête son énergie débordante et son enthousiasme au
+                jardinier, qui fera pousser aussi bien les sourires sur vos
+                visages et la joie dans vos cœurs que les fleurs du jardin.
               </p>
               <p className="hover-text">Le Jardinier</p>
             </div>
           </div>
           <div className="personne">
-            <div className="text1">
+            <div className="text1 animate-on-scroll">
               <h3>Ernestine Céleri</h3>
               <p className="main-text">
                 Ernestine est raconteuse d&#39;histoires qu&#39;elle partage en
@@ -289,7 +312,7 @@ const Lacie = () => {
               </p>
               <p className="hover-text">Jo</p>
             </div>
-            <div className="pic1">
+            <div className="pic1 animate-on-scroll">
               <img
                 src={pic11}
                 alt="Ernestine Celeri, artiste de La Compagnie Wanubida"
@@ -313,7 +336,7 @@ const Lacie = () => {
             </div>
           </div>
           <div className="personne-reverse">
-            <div className="pic1">
+            <div className="pic1 animate-on-scroll">
               <img
                 src={pic16}
                 alt="Florian Gouvier, artiste de La Compagnie Wanubida"
@@ -333,7 +356,7 @@ const Lacie = () => {
                 loading="lazy"
               />
             </div>
-            <div className="text1">
+            <div className="text1 animate-on-scroll">
               <h3>Florian Gouvier</h3>
               <p className="main-text">
                 Florian est un jongleur, acrobate, technicien lumière, prof de
@@ -348,7 +371,7 @@ const Lacie = () => {
             </div>
           </div>
           <div className="personne">
-            <div className="text1">
+            <div className="text1 animate-on-scroll">
               <h3>Ulysse Junek</h3>
               <p className="main-text">
                 Altiste virtuose, énergumène passionné et esthète cuistot,
@@ -360,7 +383,7 @@ const Lacie = () => {
               </p>
               <p className="hover-text">Tyson</p>
             </div>
-            <div className="pic1">
+            <div className="pic1 animate-on-scroll">
               <img
                 src={Ulysse}
                 alt="Ulysse Junek, artiste de La Compagnie Wanubida"
@@ -385,7 +408,7 @@ const Lacie = () => {
             </div>
           </div>
           <div className="personne-reverse">
-            <div className="pic1">
+            <div className="pic1 animate-on-scroll">
               <img
                 src={pic30}
                 alt="Emilie Rossi, artiste de La Compagnie Wanubida"
@@ -407,7 +430,7 @@ const Lacie = () => {
                 loading="lazy"
               />
             </div>
-            <div className="text1">
+            <div className="text1 animate-on-scroll">
               <h3>Emilie Rossi</h3>
               <p className="main-text">
                 Danseuse et Circassienne, de l&#39;aérien à la contorsion,
@@ -422,7 +445,7 @@ const Lacie = () => {
             </div>
           </div>
           <div className="personne">
-            <div className="text1">
+            <div className="text1 animate-on-scroll">
               <h3>Adrien Sergent</h3>
               <p className="main-text">
                 Il sait faire chanter tous les instruments qui passent entre ses
@@ -434,7 +457,7 @@ const Lacie = () => {
               </p>
               <p className="hover-text">Marcel</p>
             </div>
-            <div className="pic1">
+            <div className="pic1 animate-on-scroll">
               <img
                 src={pic4}
                 alt="Adrien Sergent, artiste de La Compagnie Wanubida"
@@ -455,11 +478,49 @@ const Lacie = () => {
               />
             </div>
           </div>
+          <div className="personne-reverse">
+            <div className="pic1 animate-on-scroll">
+              <img
+                src={Nathan}
+                alt="Nathan, artiste de La Compagnie Wanubida"
+                className={currentImageIndexes.Nathan === 0 ? "active" : ""}
+                loading="lazy"
+              />
+              <img
+                src={Nathan}
+                alt="Nathan Rossi, artiste de La Compagnie Wanubida"
+                className={currentImageIndexes.Nathan === 1 ? "active" : ""}
+                loading="lazy"
+              />
+              <img
+                src={Nathan}
+                alt="Nathan Rossi, artiste de La Compagnie Wanubida"
+                className={`left-image ${
+                  currentImageIndexes.Nathan === 2 ? "active" : ""
+                }`}
+                loading="lazy"
+              />
+            </div>
+            <div className="text1 animate-on-scroll">
+              <h3>Nathän</h3>
+              <p className="main-text">
+                Technicien son et lumière, monteur en chapiteau, jongleur...{" "}
+                <br />
+                Son goût du collectif et sa polyvalence curieuse lui a fait
+                intégrer la compagnie Wanubida pour devenir Tec tec en qualité
+                de régisseur. <br />
+                Si on ne comprend pas toujours pourquoi il est là on est souvent
+                bien content de le savoir pas loin.
+              </p>
+              <p className="hover-text">Technicien</p>
+            </div>
+          </div>
         </div>
-        <div className="valeurs">
+        <div className="line animate-on-scroll"></div>
+        <div className="valeurs animate-on-scroll">
           <h2>NOS VALEURS</h2>
         </div>
-        <div className="valeur-text">
+        <div className="valeur-text animate-on-scroll">
           <div className="intro">
             <div className="button-container">
               <button
@@ -548,19 +609,20 @@ const Lacie = () => {
             </div>
           </div>
         </div>
-        <div className="shows">
+        <div className="line2 animate-on-scroll"></div>
+        <div className="shows animate-on-scroll">
           <h2>LES AUTRES SPECTACLES</h2>
         </div>
-        <div className="aimer">
+        <div className="aimer animate-on-scroll">
           <h3>Le temps d&rsquo;aimer</h3>
         </div>
-        <div className="moreshows">
+        <div className="moreshows animate-on-scroll">
           <p>
             &quot;Un duo de clown qui se remémore l&#39;ancien temps pour aller
             de l&#39;avant !&quot;
           </p>
           <div className="flex-intro">
-            <div className="pic-aimer">
+            <div className="pic-aimer animate-on-scroll">
               <img
                 src={temps}
                 alt="affiche du spectacle le temps d'aimer"
@@ -568,9 +630,9 @@ const Lacie = () => {
                 loading="lazy"
               />
             </div>
-            <div className="pro1">
+            <div className="pro1 animate-on-scroll">
               <h2>Dossier Pro</h2>
-              <div className="button-container1">
+              <div className="button-container1 animate-on-scroll">
                 <a
                   href={dossiertda}
                   download="dossier.pdf"
@@ -579,7 +641,7 @@ const Lacie = () => {
                   Télécharger le document PDF
                 </a>
               </div>
-              <div className="button-container10">
+              <div className="button-container10 animate-on-scroll">
                 <a
                   href={dossiertda}
                   className="download-button1"
@@ -592,8 +654,8 @@ const Lacie = () => {
             </div>
           </div>
         </div>
-        <div className="personne-reverse">
-          <div className="pic1">
+        <div className="personne-reverse animate-on-scroll">
+          <div className="pic1 animate-on-scroll">
             <img
               src={tda1}
               alt="Zoé Renou, gauthier knoch, artiste de La Compagnie Wanubida"
@@ -613,7 +675,7 @@ const Lacie = () => {
               loading="lazy"
             />
           </div>
-          <div className="text1">
+          <div className="text1 animate-on-scroll">
             <h3>Zoé Renou</h3>
             <h3>Gauthier Koch</h3>
             <p className="main-text">
@@ -634,13 +696,13 @@ const Lacie = () => {
           </div>
         </div>
 
-        <div className="cafe">
+        <div className="cafe animate-on-scroll">
           <h3>Le temps d&apos;un café</h3>
           <p>-Spectacle burlesque tout public- </p>
           <span>45 min</span>
           <h4>Teaser</h4>
         </div>
-        <div className="cafeshow" ref={teaserRef}>
+        <div className="cafeshow animate-on-scroll" ref={teaserRef}>
           <div className="videocafe">
             <video controls onPlay={handlePlay} onPause={handlePause}>
               <source src={videocafe} type="video/mp4" />
@@ -648,8 +710,8 @@ const Lacie = () => {
             </video>
           </div>
         </div>
-        <div className="personne-reverse">
-          <div className="text1">
+        <div className="personne-reverse animate-on-scroll">
+          <div className="text1 animate-on-scroll">
             <h3>Corentin Boisset </h3>
             <p className="main-text">
               Dans une routine métro boulot dodo, le temps s&#39;arrête, puis
@@ -667,7 +729,7 @@ const Lacie = () => {
             </p>
             <p className="hover-text">Léon</p>
           </div>
-          <div className="pic1">
+          <div className="pic1 animate-on-scroll">
             <img
               src={Corentin}
               alt="Corentin Boisset, artiste de La Compagnie Wanubida"
@@ -682,10 +744,10 @@ const Lacie = () => {
             />
           </div>
         </div>
-        <div className="file1">
+        <div className="file1 animate-on-scroll">
           <div className="pro1">
             <h2>Dossier Technique</h2>
-            <div className="button-container1">
+            <div className="button-container1 animate-on-scroll">
               <a
                 href={cafetek}
                 download="dossier.pdf"
@@ -694,7 +756,7 @@ const Lacie = () => {
                 Télécharger le document PDF
               </a>
             </div>
-            <div className="button-container10">
+            <div className="button-container10 animate-on-scroll">
               <a
                 href={cafetek}
                 className="download-button1"
@@ -708,7 +770,7 @@ const Lacie = () => {
           <div className="pro1">
             <h2>Flyer</h2>
 
-            <div className="button-container1">
+            <div className="button-container1 animate-on-scroll">
               <a
                 href={cafeflyer}
                 download="dossier.pdf"
@@ -717,7 +779,7 @@ const Lacie = () => {
                 Télécharger le document PDF
               </a>
             </div>
-            <div className="button-container10">
+            <div className="button-container10 animate-on-scroll">
               <a
                 href={cafeflyer}
                 className="download-button1"

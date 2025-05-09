@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,6 +10,21 @@ import groupe from "../Pics/groupe.webp";
 import chap4 from "../Pics/chap4.webp";
 
 const Media = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll(".animate-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   const [activeSections, setActiveSections] = useState({
     parcours1: false,
     parcours2: false,
@@ -39,15 +54,15 @@ const Media = () => {
   return (
     <>
       <div className="media">
-        <div className="media-titre">
+        <div className="media-titre animate-on-scroll">
           <h1>Médiation</h1>
         </div>
-        <div className="tittle-media">
+        <div className="tittle-media animate-on-scroll">
           <h2>3 parcours de médiation</h2>
           <h3>(ou mille autres à imaginer ensemble !)</h3>
         </div>
 
-        <div className="li">
+        <div className="li animate-on-scroll">
           <button
             className={activeSections.parcours1 ? "active" : ""}
             onClick={() => handleParcoursClick("parcours1")}
@@ -56,7 +71,7 @@ const Media = () => {
           </button>
         </div>
         {activeSections.parcours1 && (
-          <div className="media-content">
+          <div className="media-content ">
             <div className="texte-media">
               <div className="blur-background">
                 <p>
@@ -95,7 +110,7 @@ const Media = () => {
           </div>
         )}
 
-        <div className="li">
+        <div className="li animate-on-scroll">
           <button
             className={activeSections.parcours2 ? "active" : ""}
             onClick={() => handleParcoursClick("parcours2")}
@@ -143,7 +158,7 @@ const Media = () => {
           </div>
         )}
 
-        <div className="li">
+        <div className="li animate-on-scroll">
           <button
             className={activeSections.parcours3 ? "active" : ""}
             onClick={() => handleParcoursClick("parcours3")}
@@ -188,7 +203,7 @@ const Media = () => {
           </div>
         )}
 
-        <div className="referent2">
+        <div className="referent2 ">
           <h4>Référente Médiation</h4>
           <h5>
             <span>

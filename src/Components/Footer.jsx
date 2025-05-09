@@ -179,14 +179,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="footy">
-          <p>Copyright © 2024 Compagnie Wanubida </p>
+          <p>
+            Copyright © 2024 Compagnie Wanubida <span> | Par</span>{" "}
+          </p>
           <a
             href="https://www.thecoolaxolotl.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            <span> | </span> Par The Cool Axolotl
+            The Cool Axolotl
           </a>
         </div>
       </footer>

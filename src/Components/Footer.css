@@ -74,6 +74,11 @@ footer {
   padding-top: 50px;
   padding-bottom: 30px;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.footy a:hover {
+  transform: scale(1.01);
 }
 
 /* -------------RESPONSIVE----------------- */
@@ -100,7 +105,7 @@ footer {
   }
 
   .title h3 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .logo-track img {

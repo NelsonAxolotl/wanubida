@@ -116,7 +116,7 @@ const Show = () => {
             </video>
           </div>
         </div>
-        <div className="file">
+        {/* <div className="file">
           <div className="pro">
             <h2>Dossier Pro</h2>
 
@@ -199,7 +199,7 @@ const Show = () => {
               06 80 54 05 74
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
       {enlargedImage && (
         <div className="overlay" onClick={handleCloseImage}>

@@ -196,18 +196,20 @@ body {
   margin-top: 30px;
   border-radius: 5px;
   color: var(--text-light);
-  transition: 0.8s ease-in-out;
+  background-color: transparent; /* important pour que la transition démarre bien */
+  transition: background-color 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .referent2:hover {
-  background: black;
+  background-color: black !important;
 }
 
 .referent2 a {
   font-size: 1.2rem;
   color: var(--text-light);
+  transition: color 0.3s ease-in-out;
 }
 
 .referent2 a:hover {

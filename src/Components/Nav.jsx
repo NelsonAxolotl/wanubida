@@ -65,12 +65,12 @@ const Nav = () => {
               label: "Contacts",
               className: "slide-in-down-6",
             },
-            { path: "/agenda", label: "Agenda", className: "slide-in-down-7" },
-            {
-              path: "/billetterie",
-              label: "Billetterie",
-              className: "slide-in-down-8",
-            },
+            // { path: "/agenda", label: "Agenda", className: "slide-in-down-7" },
+            // {
+            //   path: "/billetterie",
+            //   label: "Billetterie",
+            //   className: "slide-in-down-8",
+            // },
           ].map(({ path, label, className }, index) => (
             <li
               key={index}

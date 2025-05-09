@@ -139,6 +139,7 @@ body {
   max-height: 1280px;
   padding: 40px;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  margin-bottom: 50px;
 }
 
 .teaser-spectacle h2 {

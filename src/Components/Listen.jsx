@@ -50,6 +50,22 @@ const images = [
 ];
 
 const Listen = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll(".animate-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   const audioRef = useRef(null);
   const teaserRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -109,13 +125,13 @@ const Listen = () => {
   return (
     <>
       <div className="listen">
-        <div className="listen-titre">
+        <div className="listen-titre animate-on-scroll">
           <h1>Ecouter / Voir</h1>
         </div>
-        <div className="galerie">
+        <div className="galerie animate-on-scroll">
           <h2>La tournée du facteur en images</h2>
         </div>
-        <div className="gallery-container">
+        <div className="gallery-container animate-on-scroll">
           <Slider {...settings}>
             {images.map((image, index) => (
               <div key={index} className="slider-item">
@@ -138,30 +154,30 @@ const Listen = () => {
             ))}
           </Slider>
         </div>
-        <div className="divider2"></div>
-        <div className="teaser-listen" ref={teaserRef}>
+        <div className="divider2 animate-on-scroll"></div>
+        <div className="teaser-listen animate-on-scroll" ref={teaserRef}>
           <h2>Teaser</h2>
-          <div className="video-container-listen">
+          <div className="video-container-listen animate-on-scroll">
             <video controls onPlay={handlePlay} onPause={handlePause}>
               <source src={video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
-        <div className="divider2"></div>
-        <div className="son">
+        <div className="divider2 animate-on-scroll"></div>
+        <div className="son animate-on-scroll">
           <img
             src={radio}
             alt="photo radio"
             onClick={() => handleImageClick(radio)}
             loading="lazy"
           />
-          <div className="audio-control">
+          <div className="audio-control animate-on-scroll">
             <button onClick={handlePlayPause}>
               {isPlaying ? "Pause" : "Écouter le son"}
             </button>
             <audio ref={audioRef} src={sound} />
-            <div className="text-right">
+            <div className="text-right animate-on-scroll">
               <p>La troupe Wanubida invitée de </p>
               <img
                 src={rvr}
@@ -172,9 +188,9 @@ const Listen = () => {
             </div>
           </div>
         </div>
-        <div className="divider3"></div>
-        <div className="zic">
-          <div className="linksong">
+        <div className="divider3 animate-on-scroll"></div>
+        <div className="zic animate-on-scroll">
+          <div className="linksong animate-on-scroll">
             <a
               href="https://cabaretwanubida.bandcamp.com/album/cabaret-wanubida-la-tourn-e-du-facteur"
               target="_blank"
@@ -184,7 +200,7 @@ const Listen = () => {
               🎶 Écouter l'album sur Bandcamp
             </a>
           </div>
-          <div className="album">
+          <div className="album animate-on-scroll">
             <p>L'album </p>
 
             <img

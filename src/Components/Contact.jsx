@@ -1,12 +1,27 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./Contact.css";
-import LeafletMap3 from "./LeafletMap3";
+// import LeafletMap3 from "./LeafletMap3";
 import End from "../Components/End";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import pic15 from "../Pics/15.webp";
 const Contact = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll(".animate-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   const [enlargedImage, setEnlargedImage] = useState(null);
   const handleImageClick = (image) => {
     setEnlargedImage(image);
@@ -17,10 +32,10 @@ const Contact = () => {
   };
   return (
     <>
-      <div className="contacts">
+      <div className="contacts animate-on-scroll">
         <h1>Contacts</h1>
         <div className="contact-container">
-          <div className="contact-section">
+          <div className="contact-section animate-on-scroll">
             <div className="contact-titre-h2">
               <h2>Administration</h2>
             </div>
@@ -60,7 +75,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="contact-section3">
+          <div className="contact-section3 animate-on-scroll">
             <div className="resa-h2">
               <h2>Réservation</h2>
             </div>
@@ -90,10 +105,10 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="reseaux">
+        <div className="reseaux animate-on-scroll">
           <h2>Réseaux</h2>
         </div>
-        <div className="icons">
+        <div className="icons animate-on-scroll">
           <div className="facebook">
             <a
               href="https://www.facebook.com/cabaretwanubida"
@@ -124,7 +139,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="venir">
+        {/* <div className="venir">
           <h2>Lieu du Spectacle</h2>
           <p>LA TOURNÉE DU FACTEUR</p>
         </div>
@@ -162,7 +177,7 @@ const Contact = () => {
             </div>
           </div>
           <LeafletMap3 />
-        </div>
+        </div> */}
       </div>
       <div className="pic-contact">
         <img
