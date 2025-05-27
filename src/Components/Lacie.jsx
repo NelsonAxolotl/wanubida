@@ -198,7 +198,7 @@ const Lacie = () => {
           <h3>Cabaret Wanubida</h3>
         </div>
         <div className="artistes">
-          <div className="personne-reverse ">
+          <div className="personne-reverse animate-on-scroll">
             <div className="pic1 animate-on-scroll">
               <img
                 src={pic32}
@@ -221,20 +221,20 @@ const Lacie = () => {
             </div>
             <div className="text1 animate-on-scroll">
               <h3>Corentin Boisset</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Clown et danseur, il est touchant et drôle par sa maladresse et
                 incarne le facteur à merveille. <br />
                 Il fait le lien en virevoltant parmi les autres personnages et
                 vous embarque avec légèreté dans son monde un peu branlant.
               </p>
-              <p className="hover-text">Le Facteur</p>
+              <p className="hover-text animate-on-scroll">Le Facteur</p>
             </div>
           </div>
 
           <div className="personne">
             <div className="text1 animate-on-scroll">
               <h3>Gauthier Koch</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Clown, musicien, auteur compositeur interprète et Alsacien, il
                 joue de son accent pour donner vie au Belge, le frère du
                 jardinier. <br />
@@ -242,7 +242,9 @@ const Lacie = () => {
                 guitare ou l&#39;accordéon en bandoulière. <br />
                 Trinquera-t-il avec vous ?
               </p>
-              <p className="hover-text">Le frère du Jardinier</p>
+              <p className="hover-text animate-on-scroll">
+                Le frère du Jardinier
+              </p>
             </div>
             <div className="pic1 animate-on-scroll">
               <img
@@ -289,20 +291,20 @@ const Lacie = () => {
             </div>
             <div className="text1 animate-on-scroll">
               <h3>Pierre Auguste</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Acrobate touche-à-tout, jongleur et poète de l&#39;existence, il
                 croque la vie à pleines dents ! <br />
                 Pierre prête son énergie débordante et son enthousiasme au
                 jardinier, qui fera pousser aussi bien les sourires sur vos
                 visages et la joie dans vos cœurs que les fleurs du jardin.
               </p>
-              <p className="hover-text">Le Jardinier</p>
+              <p className="hover-text animate-on-scroll">Le Jardinier</p>
             </div>
           </div>
           <div className="personne">
             <div className="text1 animate-on-scroll">
               <h3>Ernestine Céleri</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Ernestine est raconteuse d&#39;histoires qu&#39;elle partage en
                 musique, chant, danse ou galipettes. <br />
                 Assez insaisissable dans le rôle de Jo, iel observe ce monde
@@ -310,7 +312,7 @@ const Lacie = () => {
                 langage, ou bien dansé ou vibrant du son de son marimba et de sa
                 voix.
               </p>
-              <p className="hover-text">Jo</p>
+              <p className="hover-text animate-on-scroll">Jo</p>
             </div>
             <div className="pic1 animate-on-scroll">
               <img
@@ -358,7 +360,7 @@ const Lacie = () => {
             </div>
             <div className="text1 animate-on-scroll">
               <h3>Florian Gouvier</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Florian est un jongleur, acrobate, technicien lumière, prof de
                 cirque... <br />
                 Mais ce qu&#39;il aime par-dessus tout, c&#39;est rêver. Alors,
@@ -367,13 +369,13 @@ const Lacie = () => {
                 virevoltant des songes ! <br />
                 Venez rêver en sa compagnie !
               </p>
-              <p className="hover-text">Marco Leptique</p>
+              <p className="hover-text animate-on-scroll">Marco Leptique</p>
             </div>
           </div>
           <div className="personne">
             <div className="text1 animate-on-scroll">
               <h3>Ulysse Junek</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Altiste virtuose, énergumène passionné et esthète cuistot,
                 Ulysse se transforme pour notre plus grande joie en Tyson,
                 culturiste de la tignasse, poseur invétéré, philosophe de
@@ -381,7 +383,7 @@ const Lacie = () => {
                 Venez écouter ses discours et sa sublime musique, ou
                 l&#39;inverse !
               </p>
-              <p className="hover-text">Tyson</p>
+              <p className="hover-text animate-on-scroll">Tyson</p>
             </div>
             <div className="pic1 animate-on-scroll">
               <img
@@ -432,7 +434,7 @@ const Lacie = () => {
             </div>
             <div className="text1 animate-on-scroll">
               <h3>Emilie Rossi</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Danseuse et Circassienne, de l&#39;aérien à la contorsion,
                 Emilie utilise le mouvement comme langage. <br />
                 Elle passe de la sensualité au burlesque, de l&#39;intime à
@@ -441,13 +443,13 @@ const Lacie = () => {
                 sa fragilité et ses failles, qui nous touchent et nous font
                 rire.
               </p>
-              <p className="hover-text">Josie</p>
+              <p className="hover-text animate-on-scroll">Josie</p>
             </div>
           </div>
           <div className="personne">
             <div className="text1 animate-on-scroll">
               <h3>Adrien Sergent</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Il sait faire chanter tous les instruments qui passent entre ses
                 mains... d&#39;ailleurs il aime aussi beaucoup chanter. <br />
                 Est-ce lui ou Marcel, son personnage, qui ne peut s&#39;empêcher
@@ -455,7 +457,7 @@ const Lacie = () => {
                 Ce qui est certain, c&#39;est qu&#39;il nous fait vibrer à
                 l&#39;unisson de ses belles harmonies.
               </p>
-              <p className="hover-text">Marcel</p>
+              <p className="hover-text animate-on-scroll">Marcel</p>
             </div>
             <div className="pic1 animate-on-scroll">
               <img
@@ -503,7 +505,7 @@ const Lacie = () => {
             </div>
             <div className="text1 animate-on-scroll">
               <h3>Nathän</h3>
-              <p className="main-text">
+              <p className="main-text animate-on-scroll">
                 Technicien son et lumière, monteur en chapiteau, jongleur...{" "}
                 <br />
                 Son goût du collectif et sa polyvalence curieuse lui a fait
@@ -512,7 +514,7 @@ const Lacie = () => {
                 Si on ne comprend pas toujours pourquoi il est là on est souvent
                 bien content de le savoir pas loin.
               </p>
-              <p className="hover-text">Technicien</p>
+              <p className="hover-text animate-on-scroll">Technicien</p>
             </div>
           </div>
         </div>

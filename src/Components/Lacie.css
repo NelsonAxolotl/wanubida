@@ -1,4 +1,17 @@
 /* Styles généraux pour le conteneur principal */
+
+/* Elements appear on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 1.5s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .lacie {
   background: rgba(228 139 110 / 100%);
   min-height: 100vh;

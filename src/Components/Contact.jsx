@@ -35,7 +35,7 @@ const Contact = () => {
       <div className="contacts animate-on-scroll">
         <h1>Contacts</h1>
         <div className="contact-container">
-          <div className="contact-section animate-on-scroll">
+          <div className="contact-section">
             <div className="contact-titre-h2">
               <h2>Administration</h2>
             </div>
@@ -75,7 +75,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="contact-section3 animate-on-scroll">
+          <div className="contact-section3 ">
             <div className="resa-h2">
               <h2>Réservation</h2>
             </div>

@@ -54,14 +54,15 @@
   max-width: 400px;
   text-align: center;
   box-sizing: border-box;
-  transition: all 0.8s ease-in-out;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
-
 .contact-section:hover {
   border: 1px solid goldenrod;
   background: rgba(0 0 0 / 74.2%); /* Notation corrigée */
   color: rgb(114 199 255 / 100%);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5); /* bonus visuel */
 }
 
 .contact-section3 {
@@ -75,13 +76,16 @@
   max-width: 400px;
   text-align: center;
   box-sizing: border-box;
-  transition: all 0.8s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .contact-section3:hover {
   border: 1px solid goldenrod;
   background: rgba(0 0 0 /74.2%);
   color: rgba(114 199 255 / 100%);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5); /* bonus visuel */
 }
 
 /* ---------------------Contact Titles and Text-------------- */
@@ -142,6 +146,10 @@
 
 .phone a:hover {
   color: goldenrod;
+}
+
+.phone span {
+  margin-top: 10px;
 }
 
 /* ----------------------Social Media and Icons------------ */
