@@ -12,7 +12,6 @@ import chap8 from "../Pics/chap8.webp";
 
 const Show = () => {
   const teaserRef = useRef(null);
-  const noteTextRef = useRef(null);
   const [enlargedImage, setEnlargedImage] = useState(null);
 
   const handlePlay = useCallback(() => {
@@ -44,65 +43,63 @@ const Show = () => {
       { threshold: 0.1 }
     );
 
-    const node = noteTextRef.current; // Copie locale
-
-    if (node) {
-      observer.observe(node);
-    }
+    // Sélectionne tous les éléments à animer
+    const elements = document.querySelectorAll(".animate-on-scroll");
+    elements.forEach((el) => observer.observe(el));
 
     return () => {
-      if (node) {
-        observer.unobserve(node);
-      }
+      elements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 
   return (
     <>
       <div className="show">
-        <div className="show-titre">
+        <div className="show-titre animate-on-scroll">
           <h1>Spectacle</h1>
         </div>
-        <div className="facteur-h2">
+
+        <div className="facteur-h2 animate-on-scroll">
           <h2>La tournée du Facteur</h2>
         </div>
 
-        <div className="public">
+        <div className="public animate-on-scroll">
           <img
             src={affiche}
             alt="Affiche du spectacle, La tournée du Facteur, compagnie Wanubida"
             onClick={() => handleImageClick(affiche)}
             loading="lazy"
           />
-
           <h2>-Kahem-</h2>
-
           <h3>Cirque poétique et absurde</h3>
           <span>Durée : 1h30</span>
           <p>Spectacle tout public à partir de 5 ans</p>
         </div>
-        <div className="facteur">
-          <div className="facteur-text" ref={noteTextRef}>
+
+        <div className="facteur animate-on-scroll">
+          <div className="facteur-text">
             <p>
               Le facteur commence sa tournée quotidienne. <br />
               Que représente cette figure en voie de disparition ? <br />
               Ce spectacle est une ode au maintien du lien social avec ses bons
               et ses mauvais côtés. <br />
-              Une succession de gueules cassées, de pirouettes et d&rsquo;amour,
-              d&rsquo;accordéon et de chutes. <br />
-              Finalement, n&rsquo;est-ce pas cela la vie ? <br />
+              Une succession de gueules cassées, de pirouettes et d’amour,
+              d’accordéon et de chutes. <br />
+              Finalement, n’est-ce pas cela la vie ? <br />
               Dans ce spectacle, jongleurs, acrobates, danseurs, musiciens et
               clowns vous offrent un moment suspendu drôle, poétique et absurde.{" "}
               <br />
               Vous suivrez le facteur dans la ronde folle de sa distribution
-              rocambolesque, à l&rsquo;image des figures qui croisent sa route.
+              rocambolesque, à l’image des figures qui croisent sa route.
             </p>
           </div>
         </div>
-        <div className="teaser-spectacle">
+
+        <div className="teaser-spectacle animate-on-scroll">
           <h2>Teaser</h2>
         </div>
-        <div className="teaser-show" ref={teaserRef}>
+
+        <div className="teaser-show animate-on-scroll" ref={teaserRef}>
           <div className="video-container">
             <video
               controls
@@ -116,10 +113,10 @@ const Show = () => {
             </video>
           </div>
         </div>
-        {/* <div className="file">
-          <div className="pro">
-            <h2>Dossier Pro</h2>
 
+        <div className="file">
+          <div className="pro animate-on-scroll">
+            <h2>Dossier Pro</h2>
             <div className="button-container">
               <a
                 href={dossier}
@@ -146,9 +143,8 @@ const Show = () => {
             </div>
           </div>
 
-          <div className="tek">
+          <div className="tek animate-on-scroll">
             <h2>Dossier Technique</h2>
-
             <div className="button-container">
               <a
                 href={dossiertek}
@@ -175,15 +171,16 @@ const Show = () => {
             </div>
           </div>
         </div>
-        <div className="tek-accueil">
+
+        <div className="tek-accueil animate-on-scroll">
           <p>
-            * Les conditions d&apos;accueil technique sont à discuter au
-            préalable directement avec l&apos;équipe *
+            * Les conditions d’accueil technique sont à discuter au préalable
+            directement avec l’équipe *
           </p>
         </div>
-        <div className="referrent">
-          <h3>Référent technique</h3>
 
+        <div className="referrent animate-on-scroll">
+          <h3>Référent technique</h3>
           <h4>
             <span>
               <FontAwesomeIcon icon={faEnvelope} />
@@ -199,8 +196,9 @@ const Show = () => {
               06 80 54 05 74
             </a>
           </p>
-        </div> */}
+        </div>
       </div>
+
       {enlargedImage && (
         <div className="overlay" onClick={handleCloseImage}>
           <div className="enlarged-image-container">
@@ -211,7 +209,8 @@ const Show = () => {
           </div>
         </div>
       )}
-      <div className="pic-contact">
+
+      <div className="pic-contact animate-on-scroll">
         <img
           src={chap8}
           alt="Photo night chapiteau ombres"

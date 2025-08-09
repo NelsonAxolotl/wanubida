@@ -540,7 +540,7 @@ const Lacie = () => {
                   L&#39;écriture et l&#39;administration collective du spectacle
                   et de la compagnie, en tenant compte des qualités de chacun.e,
                   le choix de créer pour ce lieu mythique qu&#39;est le
-                  chapiteau sont les principaux ingrédients nécessaires à{" "}
+                  chapiteau sont les principaux ingrédients à{" "}
                   <span>l&#39;équipe du Cabaret Wanubida</span> pour assurer
                   <span> l&#39;inclusion</span> de toutes et tous, artistes et
                   public. <br />
@@ -571,7 +571,7 @@ const Lacie = () => {
                 <p>
                   Se goûte et se respire à chaque minute du spectacle et de la
                   vie du collectif. Les artistes brisent{" "}
-                  <span>le 4ème mur</span> et dialoguent directement avec le
+                  <span>"le 4ème mur"</span> et dialoguent directement avec le
                   public, le prennent à partie, sans pour autant le contraindre.{" "}
                   <br />
                   Ce dernier est largement invité à participer tout au long du
