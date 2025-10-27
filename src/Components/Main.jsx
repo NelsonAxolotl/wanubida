@@ -142,7 +142,8 @@ const Main = () => {
         <div className="all-reseau animate-on-scroll">
           <div className="reseau">
             <h2>
-              Infos, Actu et Prochaines Dates<span className="dots">.</span>
+              Infos, Actu et <span className="responsive-br"></span>
+              Prochaines Dates<span className="dots">.</span>
             </h2>
             <p>
               Sarah :{" "}

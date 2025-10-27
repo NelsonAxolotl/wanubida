@@ -152,6 +152,10 @@
   margin-top: 10px;
 }
 
+.ticket a:hover {
+  color: goldenrod;
+}
+
 /* ----------------------Social Media and Icons------------ */
 .reseaux h2 {
   font-size: 2.7rem;
@@ -446,7 +450,7 @@ a {
   }
 
   .contact-section3 {
-    height: 170px;
+    height: 230px;
     width: 90%;
     max-width: none;
   }

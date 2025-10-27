@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import "./Contact.css";
 import End from "../Components/End";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faPhone,
+  faTicket,
+} from "@fortawesome/free-solid-svg-icons";
 
 import pic15 from "../Pics/15.webp";
 
@@ -98,6 +102,17 @@ const Contact = () => {
                   Sarah :{" "}
                   <a href="tel:+33631224854" className="contact-phone">
                     06 31 22 48 54
+                  </a>
+                </span>
+              </div>
+              <div className="ticket">
+                <span>
+                  <FontAwesomeIcon icon={faTicket}></FontAwesomeIcon>{" "}
+                  {/* si tu veux une icône */}
+                </span>
+                <span>
+                  <a target="_blank" href="https://wanubida.fr/liens/">
+                    Billetterie en ligne
                   </a>
                 </span>
               </div>
