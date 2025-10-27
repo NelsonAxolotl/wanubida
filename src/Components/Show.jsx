@@ -81,16 +81,17 @@ const Show = () => {
             <p>
               Le facteur commence sa tournée quotidienne. <br />
               Que représente cette figure en voie de disparition ? <br />
-              Ce spectacle est une ode au maintien du lien social avec ses bons
-              et ses mauvais côtés. <br />
-              Une succession de gueules cassées, de pirouettes et d’amour,
-              d’accordéon et de chutes. <br />
-              Finalement, n’est-ce pas cela la vie ? <br />
-              Dans ce spectacle, jongleurs, acrobates, danseurs, musiciens et
-              clowns vous offrent un moment suspendu drôle, poétique et absurde.{" "}
+              La tournée du facteur, spectacle multidisciplinaire tout public à
+              partir de 4/5 ans, est une ode au maintien du lien social avec ses
+              bons et ses mauvais côtés. <br />
+              Une succession de pirouettes et d’amour, d’accordéon et de chutes,
+              portées par de joyeux lurons un peu cabossés ! <br />
+              Dans ce spectacle danse, acrobatie, musique live, clown et
+              jonglerie vous entrainent dans un moment suspendu, drôle, poétique
+              et absurde.
               <br />
-              Vous suivrez le facteur dans la ronde folle de sa distribution
-              rocambolesque, à l’image des figures qui croisent sa route.
+              Suivez le facteur dans la ronde folle de sa distribution
+              rocambolesque, à l’image des figures qui croisent sa route !
             </p>
           </div>
         </div>
@@ -111,64 +112,6 @@ const Show = () => {
               <source src={video} type="video/mp4" />
               Votre navigateur ne supporte pas la balise vidéo.
             </video>
-          </div>
-        </div>
-
-        <div className="file">
-          <div className="pro animate-on-scroll">
-            <h2>Dossier Pro</h2>
-            <div className="button-container">
-              <a
-                href={dossier}
-                download="dossier.pdf"
-                className="download-button"
-              >
-                Télécharger le document PDF
-              </a>
-              <a
-                href={dossier}
-                className="download-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Voir le document PDF
-              </a>
-              <img
-                src={pic2}
-                alt="Photo de groupe"
-                className="responsive-groupe-img"
-                onClick={() => handleImageClick(pic2)}
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div className="tek animate-on-scroll">
-            <h2>Dossier Technique</h2>
-            <div className="button-container">
-              <a
-                href={dossiertek}
-                download="dossiertek.pdf"
-                className="download-button"
-              >
-                Télécharger le document PDF
-              </a>
-              <a
-                href={dossiertek}
-                className="download-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Voir le document PDF
-              </a>
-              <img
-                src={groupe5}
-                alt="Photo technique"
-                className="responsive-groupe2-img"
-                onClick={() => handleImageClick(groupe5)}
-                loading="lazy"
-              />
-            </div>
           </div>
         </div>
 

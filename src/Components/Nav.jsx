@@ -5,7 +5,7 @@ import logo from "../Pics/logo.webp";
 
 const Nav = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const [showHomePage, setShowHomePage] = useState(true); // Lancer directement la page d'accueil
+  const [showHomePage, setShowHomePage] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
@@ -61,16 +61,10 @@ const Nav = () => {
             },
             { path: "/cie", label: "La Cie", className: "slide-in-down-5" },
             {
-              path: "/contacts",
-              label: "Contacts",
+              path: "/contacts/reservations",
+              label: "Contacts/réservations",
               className: "slide-in-down-6",
             },
-            // { path: "/agenda", label: "Agenda", className: "slide-in-down-7" },
-            // {
-            //   path: "/billetterie",
-            //   label: "Billetterie",
-            //   className: "slide-in-down-8",
-            // },
           ].map(({ path, label, className }, index) => (
             <li
               key={index}

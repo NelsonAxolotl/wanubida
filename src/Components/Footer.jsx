@@ -180,7 +180,7 @@ const Footer = () => {
         </div>
         <div className="footy">
           <p>
-            Copyright © 2024 Compagnie Wanubida <span> | Par</span>{" "}
+            Copyright © 2024 Compagnie Wanubida <span> | </span>{" "}
           </p>
           <a
             href="https://www.thecoolaxolotl.com"

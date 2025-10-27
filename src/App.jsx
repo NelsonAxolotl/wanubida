@@ -26,7 +26,7 @@ function App() {
           <Route path="/mediation" element={<Mediation />} />
           <Route path="/ecouter/voir" element={<Ecouter />} />
           <Route path="/cie" element={<Cie />} />
-          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/contacts/reservations" element={<Contacts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

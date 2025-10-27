@@ -4,7 +4,6 @@ import "./Main.css";
 import Footer from "../Components/Footer";
 import chap from "../Pics/chapiteau.webp";
 import affiche from "../Pics/affiche.webp";
-import article from "../Pics/article.webp";
 import video from "../Video/Wanubida.mp4";
 
 const comments = [
@@ -126,24 +125,6 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="all-press animate-on-scroll">
-          <div className="presse">
-            <h2>La presse en parle !</h2>
-          </div>
-          <div className="article">
-            <img
-              src={article}
-              alt="Article de presse sur Wanubida"
-              width="850"
-              height="800"
-              onClick={() => handleImageClick(article)}
-              loading="lazy"
-              tabIndex="0"
-              onKeyDown={(e) => e.key === "Enter" && handleImageClick(article)}
-            />
-          </div>
-        </div>
-
         <div className="comments animate-on-scroll">
           <h2>Avis des spectateurs</h2>
         </div>
@@ -161,11 +142,14 @@ const Main = () => {
         <div className="all-reseau animate-on-scroll">
           <div className="reseau">
             <h2>
-              Nous Suivre<span className="dots">.</span>
+              Infos, Actu et Prochaines Dates<span className="dots">.</span>
             </h2>
-          </div>
-          <div className="reseau-h3">
-            <h3>Actu et prochaines dates</h3>
+            <p>
+              Sarah :{" "}
+              <a href="tel:+33631224854" className="contact-phone">
+                06 31 22 48 54
+              </a>
+            </p>
           </div>
 
           <div className="icon">

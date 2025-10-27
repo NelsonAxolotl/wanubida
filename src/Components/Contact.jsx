@@ -1,11 +1,11 @@
-// import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Contact.css";
-// import LeafletMap3 from "./LeafletMap3";
 import End from "../Components/End";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+
 import pic15 from "../Pics/15.webp";
+
 const Contact = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -120,7 +120,6 @@ const Contact = () => {
               <span className="visually-hidden">
                 Suivez-nous sur Facebook
               </span>{" "}
-              {/* Utiliser cette méthode pour le texte visible mais caché */}
             </a>
           </div>
           <div className="insta">
@@ -134,50 +133,9 @@ const Contact = () => {
               <span className="visually-hidden">
                 Suivez-nous sur Instagram
               </span>{" "}
-              {/* Utiliser cette méthode pour le texte visible mais caché */}
             </a>
           </div>
         </div>
-
-        {/* <div className="venir">
-          <h2>Lieu du Spectacle</h2>
-          <p>LA TOURNÉE DU FACTEUR</p>
-        </div>
-        <div className="spanny">
-          <span>Avril 2025</span>
-        </div>
-        <div className="map-container">
-          <div className="lieux">
-            <Link
-              to="https://www.associationmallunee.com/accueil-de-spectacles"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h3>-La Mal Lunée-</h3>
-            </Link>
-            <p> 6 route D'omans, 25440 Quingey</p>
-
-            <p>
-              <span>
-                <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
-              </span>
-              <a href="tel:+33617510118" className="contact-phone">
-                06 17 51 01 18
-              </a>
-            </p>
-            <div className="spounge">
-              <span>
-                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-              </span>
-              <span>
-                <a target="_blank" href="mailto:asso.mal.lunee@gmail.com">
-                  asso.mal.lunee@gmail.com
-                </a>
-              </span>
-            </div>
-          </div>
-          <LeafletMap3 />
-        </div> */}
       </div>
       <div className="pic-contact">
         <img

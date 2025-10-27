@@ -4,7 +4,7 @@ const End = () => {
     <>
       <div className="end">
         <p>
-          Copyright © 2024 Compagnie Wanubida <span>| Par </span>
+          Copyright © 2024 Compagnie Wanubida <span>| </span>
         </p>
 
         <a
